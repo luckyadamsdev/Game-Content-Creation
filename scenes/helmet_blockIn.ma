@@ -1,6 +1,6 @@
 //Maya ASCII 2027 scene
 //Name: helmet_blockIn.ma
-//Last modified: Fri, Oct 23, 2026 10:48:59 PM
+//Last modified: Fri, Oct 23, 2026 10:51:32 PM
 //Codeset: 1252
 requires maya "2027";
 requires "mtoa" "5.5.2";
@@ -10,17 +10,17 @@ fileInfo "product" "Maya 2027";
 fileInfo "version" "2027";
 fileInfo "cutIdentifier" "202607171511-52c21617ee";
 fileInfo "osv" "Windows 11 Education v2009 (Build: 26200)";
-fileInfo "UUID" "6050E13A-4E51-5BC1-94E1-1C94B8254EA1";
+fileInfo "UUID" "07D842BD-4673-8A07-6C69-2897E411ABA8";
 createNode transform -s -n "persp";
 	rename -uid "E9107D1E-4C56-CF77-AFE7-9E80DCB945FD";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" -28.716244970971584 -13.053727039548491 221.61376037098637 ;
-	setAttr ".r" -type "double3" 366.86164702398833 -3608.1999999996369 -1.0041899440693265e-16 ;
+	setAttr ".t" -type "double3" -84.105216920244146 24.023463968793308 16.66227946827776 ;
+	setAttr ".r" -type "double3" 353.66164702360328 -3678.1999999993759 -3.8882837255930328e-15 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "43F81F52-4B55-6F38-30F8-E38FEAC3929B";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999993;
-	setAttr ".coi" 227.17658659898751;
+	setAttr ".coi" 89.999283003436773;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -14202,8 +14202,6 @@ createNode mesh -n "cheekDecorationAndTrim_geoShape" -p "cheekDecorationAndTrim_
 	addAttr -ci true -h true -sn "_gbp" -ln "gpuBlockPolicy" -at "short";
 	setAttr -k off ".v";
 	setAttr -s 2 ".iog[0].og";
-	setAttr ".iog[0].og[0].gcl" -type "componentList" 7 "f[0:243]" "f[320:323]" "f[340:459]" "f[468:1387]" "f[1464:1467]" "f[1484:1603]" "f[1612:2287]";
-	setAttr ".iog[0].og[1].gcl" -type "componentList" 6 "f[244:319]" "f[324:339]" "f[460:467]" "f[1388:1463]" "f[1468:1483]" "f[1604:1611]";
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
 	setAttr ".gtag[0].gtagnm" -type "string" "sides";
@@ -21195,16 +21193,15 @@ createNode blinn -n "helmet_blockIn_MAT";
 createNode shadingEngine -n "blinn1SG";
 	rename -uid "91C321E3-42A3-8470-9DDA-8C960A3B66EF";
 	setAttr ".ihi" 0;
-	setAttr -s 7 ".dsm";
+	setAttr -s 9 ".dsm";
 	setAttr ".ro" yes;
 createNode materialInfo -n "materialInfo1";
 	rename -uid "965F13E8-48A5-E90E-9CBE-95A83472FA79";
-createNode groupId -n "groupId6";
-	rename -uid "17678638-4FAD-E21B-922A-2BBD501BC358";
-	setAttr ".ihi" 0;
-createNode groupId -n "groupId7";
-	rename -uid "0C723E59-4187-C89F-B965-92AB0F38A42B";
-	setAttr ".ihi" 0;
+createNode nodeGraphEditorInfo -n "hyperShadePrimaryNodeEditorSavedTabsInfo";
+	rename -uid "6B5A07BC-4410-78FF-03BF-BA9049221314";
+	setAttr ".tgi[0].tn" -type "string" "Untitled_1";
+	setAttr ".tgi[0].vl" -type "double2" -44.444442678380966 -627.77775283213111 ;
+	setAttr ".tgi[0].vh" -type "double2" 616.66664216253594 44.444442678380966 ;
 select -ne :time1;
 	setAttr ".o" 0;
 select -ne :hardwareRenderingGlobals;
@@ -21231,7 +21228,6 @@ select -ne :openPBR_shader1;
 	setAttr ".bc" -type "float3" 0.40000001 0.40000001 0.40000001 ;
 	setAttr ".sr" 0.5;
 select -ne :initialShadingGroup;
-	setAttr -s 3 ".dsm";
 	setAttr ".ro" yes;
 select -ne :initialParticleSE;
 	setAttr ".ro" yes;
@@ -21271,11 +21267,6 @@ connectAttr "groupId4.id" "helmetCap_geoShape.iog.og[1].gid";
 connectAttr "groupId2.id" "faceGuard_geoShape.iog.og[1].gid";
 connectAttr "groupId3.id" "faceGuard_geoShape.iog.og[2].gid";
 connectAttr "groupId5.id" "faceGuard_geoShape.iog.og[3].gid";
-connectAttr "groupId6.id" "cheekDecorationAndTrim_geoShape.iog.og[0].gid";
-connectAttr ":initialShadingGroup.mwc" "cheekDecorationAndTrim_geoShape.iog.og[0].gco"
-		;
-connectAttr "groupId7.id" "cheekDecorationAndTrim_geoShape.iog.og[1].gid";
-connectAttr "blinn1SG.mwc" "cheekDecorationAndTrim_geoShape.iog.og[1].gco";
 relationship "link" ":lightLinker1" ":initialShadingGroup.message" ":defaultLightSet.message";
 relationship "link" ":lightLinker1" ":initialParticleSE.message" ":defaultLightSet.message";
 relationship "link" ":lightLinker1" "blinn1SG.message" ":defaultLightSet.message";
@@ -21292,16 +21283,12 @@ connectAttr "gemHousing_geoShape.iog" "blinn1SG.dsm" -na;
 connectAttr "fin_geoShape.iog" "blinn1SG.dsm" -na;
 connectAttr "finMount_geoShape.iog" "blinn1SG.dsm" -na;
 connectAttr "cheekGuardHalf_geoShape.iog" "blinn1SG.dsm" -na;
-connectAttr "cheekDecorationAndTrim_geoShape.iog.og[1]" "blinn1SG.dsm" -na;
-connectAttr "groupId7.msg" "blinn1SG.gn" -na;
+connectAttr "gem_geoShape.iog" "blinn1SG.dsm" -na;
+connectAttr "mohawk_geoShape.iog" "blinn1SG.dsm" -na;
+connectAttr "cheekDecorationAndTrim_geoShape.iog" "blinn1SG.dsm" -na;
 connectAttr "blinn1SG.msg" "materialInfo1.sg";
 connectAttr "helmet_blockIn_MAT.msg" "materialInfo1.m";
 connectAttr "blinn1SG.pa" ":renderPartition.st" -na;
 connectAttr "helmet_blockIn_MAT.msg" ":defaultShaderList1.s" -na;
 connectAttr "defaultRenderLayer.msg" ":defaultRenderingList1.r" -na;
-connectAttr "gem_geoShape.iog" ":initialShadingGroup.dsm" -na;
-connectAttr "mohawk_geoShape.iog" ":initialShadingGroup.dsm" -na;
-connectAttr "cheekDecorationAndTrim_geoShape.iog.og[0]" ":initialShadingGroup.dsm"
-		 -na;
-connectAttr "groupId6.msg" ":initialShadingGroup.gn" -na;
 // End of helmet_blockIn.ma
