@@ -1,6 +1,6 @@
 //Maya ASCII 2027 scene
 //Name: helmet_blockIn.ma
-//Last modified: Thu, Oct 29, 2026 04:25:27 PM
+//Last modified: Thu, Oct 29, 2026 04:25:45 PM
 //Codeset: 1252
 requires maya "2027";
 requires "mtoa" "5.5.2";
@@ -10,12 +10,12 @@ fileInfo "product" "Maya 2027";
 fileInfo "version" "2027";
 fileInfo "cutIdentifier" "202607171511-52c21617ee";
 fileInfo "osv" "Windows 11 Education v2009 (Build: 26200)";
-fileInfo "UUID" "A74BD8F9-4D6D-5BE2-D7E1-C8A49DDD780B";
+fileInfo "UUID" "05331230-49BA-D1CB-0887-9CABA04450FC";
 createNode transform -s -n "persp";
 	rename -uid "E9107D1E-4C56-CF77-AFE7-9E80DCB945FD";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" -28.191854847322681 2.8415550475523874 17.348008236275049 ;
-	setAttr ".r" -type "double3" -355.53835163346884 -7982.5999999948681 0 ;
+	setAttr ".t" -type "double3" -25.732382459864439 -4.2628737857644676 18.772512162736106 ;
+	setAttr ".r" -type "double3" -341.73835163352345 -7977.7999999943659 2.9843275294777399e-15 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "43F81F52-4B55-6F38-30F8-E38FEAC3929B";
 	setAttr -k off ".v" no;
