@@ -1,6 +1,6 @@
 //Maya ASCII 2026 scene
 //Name: helmet_blockIn.ma
-//Last modified: Tue, Nov 03, 2026 01:26:06 PM
+//Last modified: Tue, Nov 03, 2026 01:35:12 PM
 //Codeset: UTF-8
 requires maya "2026";
 currentUnit -l centimeter -a degree -t film;
@@ -9,12 +9,12 @@ fileInfo "product" "Maya 2026";
 fileInfo "version" "2026";
 fileInfo "cutIdentifier" "202507081222-4d6919b75c";
 fileInfo "osv" "Mac OS X 20.6.2";
-fileInfo "UUID" "C4990C44-F14E-211B-E94B-5FBD611AE441";
+fileInfo "UUID" "AE45469C-FE49-B240-8335-E39337532D19";
 createNode transform -s -n "persp";
 	rename -uid "E9107D1E-4C56-CF77-AFE7-9E80DCB945FD";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 34.675548117751802 24.998898784258913 -9.2318087955784556 ;
-	setAttr ".r" -type "double3" -20.738351507994988 2263.799999999851 0 ;
+	setAttr ".t" -type "double3" 20.756576250111213 -24.039979127032865 15.154923324377377 ;
+	setAttr ".r" -type "double3" 53.66164848977499 2212.5999999998639 -5.2365511985176034e-15 ;
 	setAttr ".rp" -type "double3" 1.5543122344752192e-15 -3.5527136788005009e-15 0 ;
 	setAttr ".rpt" -type "double3" 3.9715922898775742e-16 2.2215895678254761e-16 -1.6129436169559209e-15 ;
 createNode camera -s -n "perspShape" -p "persp";
@@ -22,7 +22,7 @@ createNode camera -s -n "perspShape" -p "persp";
 	setAttr -k off ".v" no;
 	setAttr ".pze" yes;
 	setAttr ".fl" 34.999999999999993;
-	setAttr ".coi" 38.180023954319061;
+	setAttr ".coi" 44.094218446980449;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -180687,6 +180687,10 @@ createNode mesh -n "polySurfaceShape22" -p "polySurface5";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
+	setAttr -s 3 ".pt";
+	setAttr ".pt[263]" -type "float3" 0.025717735 -0.093183041 0.094560176 ;
+	setAttr ".pt[275]" -type "float3" -0.056118965 -0.046055794 0.12325779 ;
+	setAttr ".pt[276]" -type "float3" -0.052539349 -0.048006535 0.1222844 ;
 createNode lightLinker -s -n "lightLinker1";
 	rename -uid "E0CF9A81-0440-9EE7-67DF-DC94A02D9898";
 	setAttr -s 6 ".lnk";
@@ -188395,6 +188399,446 @@ createNode polyTweak -n "polyTweak323";
 		 0.04631567 -0.0031493306 0.0024251938 0.014825344 0.003005743 -0.0012254715 -0.0056667328
 		 -0.048841953 0.011960983 0.046252251 -0.066245079 0.015533447 0.05122757 -0.10292673
 		 0.0090999603 0.028678656 0.076463699 0.0043945313 0.011137843;
+createNode polyAppendVertex -n "polyAppendVertex589";
+	rename -uid "EBE24D50-FE46-E212-C06C-10AFA75BFD60";
+	setAttr ".uopa" yes;
+	setAttr -s 2 ".v[0:1]" -type "float3"  -0.094756 12.456574 6.61799 
+		-2.3646049 12.355437 6.292037;
+	setAttr -s 4 ".d[0:3]"  -1 0 129 -1;
+	setAttr ".tx" 2;
+createNode polyAppendVertex -n "polyAppendVertex590";
+	rename -uid "E1CEC882-654C-3D7A-3639-D4BF44751ED9";
+	setAttr ".uopa" yes;
+	setAttr ".v[0]" -type "float3"  1.477547 12.410789 6.4620452;
+	setAttr -s 4 ".d[0:3]"  -1 130 0 213;
+	setAttr ".tx" 2;
+createNode polyAppendVertex -n "polyAppendVertex591";
+	rename -uid "4CC60BB7-F248-DEBB-737F-57A7F02FD661";
+	setAttr ".uopa" yes;
+	setAttr ".v[0]" -type "float3"  3.5370569 12.2526 5.9694252;
+	setAttr -s 4 ".d[0:3]"  -1 4 130 215;
+	setAttr ".tx" 2;
+createNode polyAppendVertex -n "polyAppendVertex592";
+	rename -uid "2294F7B3-B54D-3F36-F973-2DAA1EEF80E9";
+	setAttr ".uopa" yes;
+	setAttr ".v[0]" -type "float3"  5.3842258 11.898135 4.7278271;
+	setAttr -s 4 ".d[0:3]"  -1 102 4 216;
+	setAttr ".tx" 2;
+createNode polyAppendVertex -n "polyAppendVertex593";
+	rename -uid "2FA52F04-8149-5838-BE9D-34B06E580FBE";
+	setAttr ".uopa" yes;
+	setAttr ".v[0]" -type "float3"  -3.7512951 12.220163 5.6251769;
+	setAttr -s 4 ".d[0:3]"  214 129 3 -1;
+	setAttr ".tx" 2;
+createNode polyAppendVertex -n "polyAppendVertex594";
+	rename -uid "BD3057D0-994D-EC1A-7650-FA8FBBF27654";
+	setAttr ".uopa" yes;
+	setAttr ".v[0]" -type "float3"  -5.5713458 11.854049 4.246026;
+	setAttr -s 4 ".d[0:3]"  218 3 101 -1;
+	setAttr ".tx" 2;
+createNode polyAppendVertex -n "polyAppendVertex595";
+	rename -uid "276698B2-4645-2DBF-5707-D899D28170E6";
+	setAttr ".uopa" yes;
+	setAttr ".v[0]" -type "float3"  6.3784528 11.401781 2.477268;
+	setAttr -s 4 ".d[0:3]"  102 217 -1 60;
+	setAttr ".tx" 2;
+createNode polyAppendVertex -n "polyAppendVertex596";
+	rename -uid "9C0CB7C2-894D-2806-E0B5-BC91202A8F23";
+	setAttr ".uopa" yes;
+	setAttr ".v[0]" -type "float3"  6.3736281 10.726647 1.494377;
+	setAttr -s 4 ".d[0:3]"  -1 78 60 220;
+	setAttr ".tx" 2;
+createNode polyAppendVertex -n "polyAppendVertex597";
+	rename -uid "5167D9A1-BF45-0D73-9D7B-B1880610F2AD";
+	setAttr ".uopa" yes;
+	setAttr ".v[0]" -type "float3"  6.421041 9.330946 1.074789;
+	setAttr -s 4 ".d[0:3]"  78 221 -1 187;
+	setAttr ".tx" 2;
+createNode polyAppendVertex -n "polyAppendVertex598";
+	rename -uid "027CDB39-E74D-7946-1708-FD919BE3D968";
+	setAttr ".uopa" yes;
+	setAttr ".v[0]" -type "float3"  6.4370379 7.7840929 1.100891;
+	setAttr -s 4 ".d[0:3]"  -1 72 187 222;
+	setAttr ".tx" 2;
+createNode polyTweak -n "polyTweak324";
+	rename -uid "AAFEBAB0-2445-5DF4-4704-249637AB0A2F";
+	setAttr ".uopa" yes;
+	setAttr ".tk[72]" -type "float3"  0.020785809 0.017392159 0.27062917;
+createNode polyAppendVertex -n "polyAppendVertex599";
+	rename -uid "2AEDD17D-6949-D342-3931-08AC5E23B7E6";
+	setAttr ".uopa" yes;
+	setAttr ".v[0]" -type "float3"  6.3998718 5.751657 1.128323;
+	setAttr -s 4 ".d[0:3]"  72 223 -1 164;
+	setAttr ".tx" 2;
+createNode polyTweak -n "polyTweak325";
+	rename -uid "E44E5468-1448-5E2E-AA9A-4596275F2649";
+	setAttr ".uopa" yes;
+	setAttr -s 2 ".tk";
+	setAttr ".tk[72]" -type "float3" 0.015423298 0.027784348 -0.15894902 ;
+	setAttr ".tk[164]" -type "float3" 0.27335405 0.043278694 0.49825612 ;
+createNode polySplit -n "polySplit80";
+	rename -uid "2AD504C6-D140-6443-51F6-308F7B8B5801";
+	setAttr -s 13 ".e[0:12]"  0.233375 0.233375 0.233375 0.233375 0.233375
+		 0.76662499 0.76662499 0.76662499 0.76662499 0.76662499 0.76662499 0.233375 0.76662499;
+	setAttr -s 13 ".d[0:12]"  -2147483494 -2147483496 -2147483469 -2147483530 -2147483415 -2147483329 
+		-2147483330 -2147483331 -2147483332 -2147483333 -2147483334 -2147483264 -2147483335;
+	setAttr ".sma" 180;
+	setAttr ".m2015" yes;
+createNode polyAppendVertex -n "polyAppendVertex600";
+	rename -uid "A2B1A0FD-CB4E-1551-E81D-BA878FF40B63";
+	setAttr ".uopa" yes;
+	setAttr ".v[0]" -type "float3"  6.6960921 4.2696128 0.67843699;
+	setAttr -s 4 ".d[0:3]"  -1 237 164 224;
+	setAttr ".tx" 2;
+createNode polyTweak -n "polyTweak326";
+	rename -uid "9DB8EB16-1A4E-0A4D-CAF1-3D9715A75A20";
+	setAttr ".uopa" yes;
+	setAttr -s 238 ".tk[225:237]" -type "float3"  0.00056266785 0.0047364235
+		 8.1777573e-05 0.004524231 0.042373657 0.0046567917 0.0030770302 0.048167229 0.0062589645
+		 -0.018310547 0.099510193 -0.0073080063 -0.019025087 0.13656616 0.0038862228 -0.0059793741
+		 0.17580128 0.02968502 0.013624907 0.15041113 0.017316818 0.017283678 0.10300207 -0.0033221245
+		 -0.0019769669 -0.01036644 0.0012674332 -0.0069336891 -0.028862 0.0046367645 -0.025465488
+		 -0.065634251 0.0014371872 0.017604828 0.014759541 0.00079119205 0.022987843 0.0013408661
+		 0.0086120963;
+createNode polyAppendVertex -n "polyAppendVertex601";
+	rename -uid "49C26B33-F648-6965-5866-318D2210649E";
+	setAttr ".uopa" yes;
+	setAttr -s 2 ".v[0:1]" -type "float3"  6.7648668 3.9278159 0.331543 
+		6.881392 3.8547449 0.12887999;
+	setAttr -s 4 ".d[0:3]"  71 237 -1 -1;
+	setAttr ".tx" 2;
+createNode polyAppendVertex -n "polyAppendVertex602";
+	rename -uid "E9D38284-3949-A539-C70E-5EA66FFC82A1";
+	setAttr ".uopa" yes;
+	setAttr ".v[0]" -type "float3"  6.6492939 4.0628729 0.50060397;
+	setAttr -s 4 ".d[0:3]"  237 238 -1 239;
+	setAttr ".tx" 2;
+createNode polyAppendVertex -n "polyAppendVertex603";
+	rename -uid "A4A09A22-A648-0789-AB28-54B5E9DB83CE";
+	setAttr ".uopa" yes;
+	setAttr ".v[0]" -type "float3"  6.2386212 5.6731558 0.93747401;
+	setAttr -s 4 ".d[0:3]"  224 -1 241 238;
+	setAttr ".tx" 2;
+createNode polyAppendVertex -n "polyAppendVertex604";
+	rename -uid "12264B69-4742-4D0B-E087-EFA303BD0F61";
+	setAttr ".uopa" yes;
+	setAttr ".v[0]" -type "float3"  6.245759 7.4942932 0.98547101;
+	setAttr -s 4 ".d[0:3]"  242 224 223 -1;
+	setAttr ".tx" 2;
+createNode polyTweak -n "polyTweak327";
+	rename -uid "BD00949B-6249-55FD-7B98-D8A201C76DC1";
+	setAttr ".uopa" yes;
+	setAttr -s 242 ".tk[239:241]" -type "float3"  -0.049916744 -0.044635057
+		 -0.081981435 -0.044493198 -0.05205369 -0.077404633 -0.10860825 0.1245656 0.049079597;
+createNode polyAppendVertex -n "polyAppendVertex605";
+	rename -uid "FFBE5F3E-4E43-0FF9-1322-8696C3EB2CD5";
+	setAttr ".uopa" yes;
+	setAttr ".v[0]" -type "float3"  6.2695069 9.327219 0.85175699;
+	setAttr -s 4 ".d[0:3]"  243 223 222 -1;
+	setAttr ".tx" 2;
+createNode polyTweak -n "polyTweak328";
+	rename -uid "A6FDB248-1C48-1BED-E067-669C2F5FC357";
+	setAttr ".uopa" yes;
+	setAttr ".tk[243]" -type "float3"  0.010266304 0.24879551 -0.0061630011;
+createNode polyAppendVertex -n "polyAppendVertex606";
+	rename -uid "2059F2A5-DD4D-B93D-3E01-F2A7FF94FEAE";
+	setAttr ".uopa" yes;
+	setAttr ".v[0]" -type "float3"  6.172997 10.673779 1.265664;
+	setAttr -s 4 ".d[0:3]"  244 222 221 -1;
+	setAttr ".tx" 2;
+createNode polyAppendVertex -n "polyAppendVertex607";
+	rename -uid "C2ABCFA3-BA49-0E1B-04D6-AD8C5CA2060E";
+	setAttr ".uopa" yes;
+	setAttr ".v[0]" -type "float3"  6.1227131 11.493004 2.3175161;
+	setAttr -s 4 ".d[0:3]"  245 221 220 -1;
+	setAttr ".tx" 2;
+createNode polyAppendVertex -n "polyAppendVertex608";
+	rename -uid "31516241-D84E-581A-44C4-779AF2E7C780";
+	setAttr ".uopa" yes;
+	setAttr ".v[0]" -type "float3"  5.1747131 12.033158 4.351501;
+	setAttr -s 4 ".d[0:3]"  246 220 217 -1;
+	setAttr ".tx" 2;
+createNode polyTweak -n "polyTweak329";
+	rename -uid "8C120192-F94E-F494-6EFF-31A8323924C6";
+	setAttr ".uopa" yes;
+	setAttr -s 268 ".tk[247:267]" -type "float3"  0.008245945 -0.0096750259
+		 -0.0084314346 0.00010347366 0.00053930283 -6.4849854e-05 0.01102972 0.0041365623
+		 -0.010491848 0.0064744949 0.00060558319 -0.0059947968 0.0048832893 -0.0011453629
+		 -0.0037760735 0.0084519386 -0.001086235 -0.006483078 0.0024185181 0.00018692017 -0.002014637
+		 0.0026698112 0.00035667419 -0.002243042 3.528595e-05 9.5367432e-06 -3.0040741e-05
+		 0.012229919 0.011045456 -0.011880398 0.012638569 0.019737244 -0.01131916 0.0079507828
+		 0.021341324 -0.0062949657 0.011569738 0.033872604 -0.0023908019 0.016447783 0.050178528
+		 0.00091010332 0.0078377724 0.02327919 0.0017683506 0.037278652 0.051124573 0.0065060854
+		 0.069719791 0.063365936 0.02372694 0.11627388 0.04070282 0.035138369 0.15301752 0.034560204
+		 0.053766012 0.22006798 -0.00050354004 0.076051712 0.04473877 0.090984344 -0.0013198853;
+createNode polyAppendVertex -n "polyAppendVertex609";
+	rename -uid "C21143B5-6A4D-673F-E44F-C697D2A113AF";
+	setAttr ".uopa" yes;
+	setAttr ".v[0]" -type "float3"  3.3831229 12.342556 5.5917349;
+	setAttr -s 4 ".d[0:3]"  247 217 216 -1;
+	setAttr ".tx" 2;
+createNode polyAppendVertex -n "polyAppendVertex610";
+	rename -uid "8C13A1D3-A844-0387-BC07-19B62C6F49F3";
+	setAttr ".uopa" yes;
+	setAttr ".v[0]" -type "float3"  1.477833 12.479621 6.1416678;
+	setAttr -s 4 ".d[0:3]"  248 216 215 -1;
+	setAttr ".tx" 2;
+createNode polyAppendVertex -n "polyAppendVertex611";
+	rename -uid "5AE78237-E142-97A4-9C99-E3A55E9AEE4F";
+	setAttr ".uopa" yes;
+	setAttr ".v[0]" -type "float3"  -0.045532901 12.570824 6.2515578;
+	setAttr -s 4 ".d[0:3]"  249 215 213 -1;
+	setAttr ".tx" 2;
+createNode polyAppendVertex -n "polyAppendVertex612";
+	rename -uid "19899EF8-B44A-F405-D3C4-21A246446D25";
+	setAttr ".uopa" yes;
+	setAttr ".v[0]" -type "float3"  -2.2084451 12.429861 5.989327;
+	setAttr -s 4 ".d[0:3]"  250 213 214 -1;
+	setAttr ".tx" 2;
+createNode polyAppendVertex -n "polyAppendVertex613";
+	rename -uid "78E8B4C2-2D4B-FFC6-3D0F-20A70613C4B3";
+	setAttr ".uopa" yes;
+	setAttr ".v[0]" -type "float3"  -3.617599 12.374339 5.4469271;
+	setAttr -s 4 ".d[0:3]"  218 -1 251 214;
+	setAttr ".tx" 2;
+createNode polyAppendVertex -n "polyAppendVertex614";
+	rename -uid "22275BE1-684F-981E-BDB4-2790441D7D3D";
+	setAttr ".uopa" yes;
+	setAttr ".v[0]" -type "float3"  -5.30688 12.202805 4.0040202;
+	setAttr -s 4 ".d[0:3]"  219 -1 252 218;
+	setAttr ".tx" 2;
+createNode polyAppendVertex -n "polyAppendVertex615";
+	rename -uid "9E0FB58E-9F45-B23D-4EF0-A3984282AB18";
+	setAttr ".uopa" yes;
+	setAttr -s 2 ".v[0:1]" -type "float3"  -5.7484798 11.819185 3.5622029 
+		-6.316896 11.22307 2.1247089;
+	setAttr -s 4 ".d[0:3]"  -1 219 101 -1;
+	setAttr ".tx" 2;
+createNode polyMergeVert -n "polyMergeVert164";
+	rename -uid "D90EA892-184D-834F-AA81-84AB93330A59";
+	setAttr ".ics" -type "componentList" 2 "vtx[7]" "vtx[255]";
+	setAttr ".ix" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1;
+	setAttr ".d" 0.001;
+createNode polyTweak -n "polyTweak330";
+	rename -uid "B13F68ED-014F-D286-4358-8B84A43A9CD5";
+	setAttr ".uopa" yes;
+	setAttr ".tk[255]" -type "float3"  -0.2752924 0.13061237 -0.076036692;
+createNode polyAppendVertex -n "polyAppendVertex616";
+	rename -uid "C9A3E8EF-B54F-90C2-ED1A-A6A4B8CF473F";
+	setAttr ".uopa" yes;
+	setAttr ".v[0]" -type "float3"  -6.2505698 10.459758 1.254002;
+	setAttr -s 4 ".d[0:3]"  254 7 85 -1;
+	setAttr ".tx" 2;
+createNode polyTweak -n "polyTweak331";
+	rename -uid "577D4001-E04A-084F-BA65-C09CF2C0E6B7";
+	setAttr ".uopa" yes;
+	setAttr ".tk[254]" -type "float3"  -0.50335693 -0.57926083 -1.4322474;
+createNode polyAppendVertex -n "polyAppendVertex617";
+	rename -uid "B64A3928-364A-4D7D-3224-2F9C71C6222D";
+	setAttr ".uopa" yes;
+	setAttr ".v[0]" -type "float3"  -6.414299 8.9239683 -0.13996799;
+	setAttr -s 4 ".d[0:3]"  176 -1 212 80;
+	setAttr ".tx" 2;
+createNode polyAppendVertex -n "polyAppendVertex618";
+	rename -uid "72CD022E-8842-284B-D7DB-9C8DB02471FD";
+	setAttr ".uopa" yes;
+	setAttr ".v[0]" -type "float3"  -6.419836 7.16048 -0.117133;
+	setAttr -s 4 ".d[0:3]"  82 -1 256 176;
+	setAttr ".tx" 2;
+createNode polyAppendVertex -n "polyAppendVertex619";
+	rename -uid "25CB140F-CE46-B843-1F34-87A26CFAE261";
+	setAttr ".uopa" yes;
+	setAttr ".v[0]" -type "float3"  -6.6439681 8.9926033 0.92778701;
+	setAttr -s 4 ".d[0:3]"  85 212 256 -1;
+	setAttr ".tx" 2;
+createNode polyAppendVertex -n "polyAppendVertex620";
+	rename -uid "7A7247AF-ED42-9B96-05DA-F9968F340E3A";
+	setAttr ".uopa" yes;
+	setAttr ".v[0]" -type "float3"  -6.6175218 7.2605691 0.95751399;
+	setAttr -s 4 ".d[0:3]"  258 256 257 -1;
+	setAttr ".tx" 2;
+createNode polyAppendVertex -n "polyAppendVertex621";
+	rename -uid "83196BFD-D84F-0E80-9925-E78BC869152B";
+	setAttr ".uopa" yes;
+	setAttr ".v[0]" -type "float3"  -6.4610801 5.4216871 -0.13616;
+	setAttr -s 4 ".d[0:3]"  257 82 175 -1;
+	setAttr ".tx" 2;
+createNode polyAppendVertex -n "polyAppendVertex622";
+	rename -uid "A338C904-7848-468B-A039-DFA74319041A";
+	setAttr ".uopa" yes;
+	setAttr ".v[0]" -type "float3"  -6.8008409 4.278553 -0.24054199;
+	setAttr -s 4 ".d[0:3]"  -1 260 175 225;
+	setAttr ".tx" 2;
+createNode polyAppendVertex -n "polyAppendVertex623";
+	rename -uid "D823098D-D24B-5D20-2A4C-DDA393BFEBF3";
+	setAttr ".uopa" yes;
+	setAttr ".v[0]" -type "float3"  -6.6296248 5.7664752 1.033832;
+	setAttr -s 4 ".d[0:3]"  259 257 260 -1;
+	setAttr ".tx" 2;
+createNode polyAppendVertex -n "polyAppendVertex624";
+	rename -uid "DF45028C-C540-4FD2-D991-ACB6D57A0738";
+	setAttr ".uopa" yes;
+	setAttr ".v[0]" -type "float3"  -6.8274212 4.3928809 0.67817003;
+	setAttr -s 4 ".d[0:3]"  261 -1 262 260;
+	setAttr ".tx" 2;
+createNode polyAppendVertex -n "polyAppendVertex625";
+	rename -uid "E687DBB0-A54C-DFEF-4D76-5FA6BB03F3FA";
+	setAttr ".uopa" yes;
+	setAttr ".v[0]" -type "float3"  -7.119916 3.8045101 -0.25115401;
+	setAttr -s 4 ".d[0:3]"  -1 261 225 84;
+	setAttr ".tx" 2;
+createNode polyAppendVertex -n "polyAppendVertex626";
+	rename -uid "410FA557-B54B-9455-7103-D9A68D02AC7C";
+	setAttr ".uopa" yes;
+	setAttr ".v[0]" -type "float3"  -6.9280591 3.8879709 0.147631;
+	setAttr -s 4 ".d[0:3]"  261 264 -1 263;
+	setAttr ".tx" 2;
+createNode polyTweak -n "polyTweak332";
+	rename -uid "699063BE-8B40-D87A-D926-DF9218E77FA8";
+	setAttr ".uopa" yes;
+	setAttr -s 2 ".tk[262:263]" -type "float3"  -0.043661118 -0.14137363 -0.13651025
+		 -0.10102844 -0.011084557 -0.27688956;
+createNode polyAppendVertex -n "polyAppendVertex627";
+	rename -uid "2BEC5C2D-3443-98B2-640D-DAB05B0C8E15";
+	setAttr ".uopa" yes;
+	setAttr -s 2 ".v[0:1]" -type "float3"  -6.7462969 4.2997618 0.68045598 
+		-6.717505 4.0193348 0.44563901;
+	setAttr -s 4 ".d[0:3]"  -1 263 265 -1;
+	setAttr ".tx" 2;
+createNode polyAppendVertex -n "polyAppendVertex628";
+	rename -uid "531CEBA7-AD4F-AB3F-C5FA-D69A4C143616";
+	setAttr ".uopa" yes;
+	setAttr ".v[0]" -type "float3"  -6.4593682 5.509975 1.106318;
+	setAttr -s 4 ".d[0:3]"  -1 262 263 266;
+	setAttr ".tx" 2;
+createNode polyTweak -n "polyTweak333";
+	rename -uid "BFFCD132-DC4A-7402-8483-F0A884222133";
+	setAttr ".uopa" yes;
+	setAttr -s 269 ".tk";
+	setAttr ".tk[8:173]" -type "float3"  0.070605278 0.069059372 -0.35235262
+		 0.054365158 0.00039482117 -0.39139676 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+		 0 0 0 0 0 0.090596676 0.057418823 -0.34922922 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+		 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.075727463
+		 -0.00011730194 -0.3868947 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+		 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+		 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+		 0 0 0 0 0 0 0 0 0 0 0 0 0 0.13522148 -0.089583397 -0.665591 0 0 0 0.10657978 0.0022850037
+		 -0.58934259 0 0 0 0.087268829 0.012906075 -0.64542949 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+		 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+		 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+		 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+		 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+		 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+		 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+		 0 0 0 0 0 0 0;
+	setAttr ".tk[175:268]" 0.05339098 0.012580872 -0.60029805 0.13731432 -0.089543343
+		 -0.66503322 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+		 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+		 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -0.035220146 0.071229935 -0.16472536
+		 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.068812847
+		 0.03468132 -0.64602256 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+		 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+		 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.027926445 -0.025821686 -0.34050912 -0.035075188
+		 0.0015759468 -0.40712067 0 0 0 0 0 0 -0.067193985 0.0035643578 -0.40606973 -0.1854353
+		 -0.095016956 -0.49405497 0 0 0 0.076116562 0.17931938 0.20321316 -0.095910549 -0.10073185
+		 -0.54516613 0.19251966 0.17350531 0.33846149 0.021860123 0.21997404 0.13875794 0.1094985
+		 0.37651396 0.33572745 0 0 0;
+createNode deleteComponent -n "deleteComponent51";
+	rename -uid "C45D7201-0F4A-7646-0CDB-9D807C7D1627";
+	setAttr ".dc" -type "componentList" 1 "f[247]";
+createNode deleteComponent -n "deleteComponent52";
+	rename -uid "527D90B9-D44D-6B98-5073-AEA845DF6073";
+	setAttr ".dc" -type "componentList" 1 "f[246]";
+createNode polyAppendVertex -n "polyAppendVertex629";
+	rename -uid "08CD9921-1A4C-8726-FDE6-28A8E38E58A1";
+	setAttr ".uopa" yes;
+	setAttr -s 2 ".v[0:1]" -type "float3"  -6.4290328 7.2012062 1.124248 
+		-6.4554782 5.5763712 1.114336;
+	setAttr -s 4 ".d[0:3]"  -1 259 262 -1;
+	setAttr ".tx" 2;
+createNode polyTweak -n "polyTweak334";
+	rename -uid "058FFDB0-FD44-094F-9469-9EA7800EBEE4";
+	setAttr ".uopa" yes;
+	setAttr -s 4 ".tk";
+	setAttr ".tk[261]" -type "float3" -0.054039955 -0.0090527534 -0.3242563 ;
+	setAttr ".tk[263]" -type "float3" -0.10377884 -0.24737549 -0.27072433 ;
+	setAttr ".tk[264]" -type "float3" -0.050383568 -0.016689777 -0.32450432 ;
+	setAttr ".tk[265]" -type "float3" -0.08352375 -0.19995141 -0.29589754 ;
+createNode polyAppendVertex -n "polyAppendVertex630";
+	rename -uid "A35672F9-564B-F221-12A8-9DB07B973B2D";
+	setAttr ".uopa" yes;
+	setAttr ".v[0]" -type "float3"  -6.468524 8.7963419 1.086364;
+	setAttr -s 4 ".d[0:3]"  -1 258 259 266;
+	setAttr ".tx" 2;
+createNode polyAppendVertex -n "polyAppendVertex631";
+	rename -uid "B63F66C7-B746-1998-2ABC-9AA2D02781DF";
+	setAttr ".uopa" yes;
+	setAttr -s 4 ".d[0:3]"  255 85 258 268;
+	setAttr ".tx" 2;
+createNode polyAppendVertex -n "polyAppendVertex632";
+	rename -uid "C731D431-4744-8F6B-212D-A38E62393D06";
+	setAttr ".uopa" yes;
+	setAttr ".v[0]" -type "float3"  -6.0937319 11.505621 2.041151;
+	setAttr -s 4 ".d[0:3]"  253 219 254 -1;
+	setAttr ".tx" 2;
+createNode polyAppendVertex -n "polyAppendVertex633";
+	rename -uid "02BA62E9-B241-44A1-35E7-0DA593FB4F54";
+	setAttr ".uopa" yes;
+	setAttr ".v[0]" -type "float3"  -6.1253018 10.644261 0.97490603;
+	setAttr -s 4 ".d[0:3]"  269 254 255 -1;
+	setAttr ".tx" 2;
+createNode polyAppendVertex -n "polyAppendVertex634";
+	rename -uid "CBFDF1C1-204F-B67A-0438-64A3350D2D30";
+	setAttr ".uopa" yes;
+	setAttr ".v[0]" -type "float3"  -6.2039099 8.836441 0.71633899;
+	setAttr -s 4 ".d[0:3]"  268 -1 270 255;
+	setAttr ".tx" 2;
+createNode polyAppendVertex -n "polyAppendVertex635";
+	rename -uid "F0002BAE-C24A-68D7-18D6-DCAF1BB72D22";
+	setAttr ".uopa" yes;
+	setAttr ".v[0]" -type "float3"  -6.1326208 7.168478 0.78734201;
+	setAttr -s 4 ".d[0:3]"  271 268 266 -1;
+	setAttr ".tx" 2;
+createNode polyAppendVertex -n "polyAppendVertex636";
+	rename -uid "4C3AA1CF-DE4E-0315-50D0-A4A24F9A6BB0";
+	setAttr ".uopa" yes;
+	setAttr ".v[0]" -type "float3"  -6.2009902 5.5454092 0.79255003;
+	setAttr -s 4 ".d[0:3]"  272 266 267 -1;
+	setAttr ".tx" 2;
+createNode polyAppendVertex -n "polyAppendVertex637";
+	rename -uid "E6FFFC6D-084B-8C9D-7EE8-57BBCD48C4C3";
+	setAttr ".uopa" yes;
+	setAttr ".v[0]" -type "float3"  -6.659524 4.4124742 0.78038001;
+	setAttr -s 4 ".d[0:3]"  267 262 263 -1;
+	setAttr ".tx" 2;
+createNode polyTweak -n "polyTweak335";
+	rename -uid "994FC810-F74D-7A15-721E-619482280918";
+	setAttr ".uopa" yes;
+	setAttr -s 274 ".tk[262:273]" -type "float3"  -0.0096545219 -0.078152657
+		 -0.020098627 0.012065887 0.043635845 0.025344431 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+		 0 0 0 0 0 0 0 0 0 0 0 0 0 0;
+createNode polyAppendVertex -n "polyAppendVertex638";
+	rename -uid "836E6C92-2F4F-D99E-8E92-E7803D2A26E0";
+	setAttr ".uopa" yes;
+	setAttr ".v[0]" -type "float3"  -6.3584018 4.498003 0.49539199;
+	setAttr -s 4 ".d[0:3]"  273 267 274 -1;
+	setAttr ".tx" 2;
+createNode polyAppendVertex -n "polyAppendVertex639";
+	rename -uid "34F8ACE2-7F4A-F209-EB05-D0BE3117E734";
+	setAttr ".uopa" yes;
+	setAttr -s 2 ".v[0:1]" -type "float3"  -6.5380921 4.119236 0.212135 
+		-6.67483 3.948734 0.0358104;
+	setAttr -s 4 ".d[0:3]"  -1 263 265 -1;
+	setAttr ".tx" 2;
+createNode polyTweak -n "polyTweak336";
+	rename -uid "3D11D15E-9942-1341-A39C-E3BA4FE13E93";
+	setAttr ".uopa" yes;
+	setAttr ".tk[265]" -type "float3"  -0.12144566 -0.03063345 -0.15475383;
+createNode polyAppendVertex -n "polyAppendVertex640";
+	rename -uid "224DD80A-8C4F-4E62-28FF-A88DBC5CB751";
+	setAttr ".uopa" yes;
+	setAttr -s 4 ".d[0:3]"  263 276 275 274;
+	setAttr ".tx" 2;
 select -ne :time1;
 	setAttr ".o" 15;
 	setAttr ".unw" 15;
@@ -188488,7 +188932,7 @@ connectAttr "polyMirror9.out" "polySurfaceShape18.i";
 connectAttr "polyMirror10.out" "polySurfaceShape19.i";
 connectAttr "polyBridgeEdge7.out" "polySurfaceShape20.i";
 connectAttr "polyTweakUV75.uvtk[0]" "polySurfaceShape20.uvst[0].uvtw";
-connectAttr "polySplit79.out" "polySurfaceShape22.i";
+connectAttr "polyAppendVertex640.out" "polySurfaceShape22.i";
 connectAttr "polyTweakUV76.uvtk[0]" "polySurfaceShape22.uvst[0].uvtw";
 relationship "link" ":lightLinker1" ":initialShadingGroup.message" ":defaultLightSet.message";
 relationship "link" ":lightLinker1" ":initialParticleSE.message" ":defaultLightSet.message";
@@ -189823,6 +190267,76 @@ connectAttr "polyTweak322.out" "polySplit78.ip";
 connectAttr "polySplit77.out" "polyTweak322.ip";
 connectAttr "polyTweak323.out" "polySplit79.ip";
 connectAttr "polySplit78.out" "polyTweak323.ip";
+connectAttr "polySplit79.out" "polyAppendVertex589.ip";
+connectAttr "polyAppendVertex589.out" "polyAppendVertex590.ip";
+connectAttr "polyAppendVertex590.out" "polyAppendVertex591.ip";
+connectAttr "polyAppendVertex591.out" "polyAppendVertex592.ip";
+connectAttr "polyAppendVertex592.out" "polyAppendVertex593.ip";
+connectAttr "polyAppendVertex593.out" "polyAppendVertex594.ip";
+connectAttr "polyAppendVertex594.out" "polyAppendVertex595.ip";
+connectAttr "polyAppendVertex595.out" "polyAppendVertex596.ip";
+connectAttr "polyAppendVertex596.out" "polyAppendVertex597.ip";
+connectAttr "polyTweak324.out" "polyAppendVertex598.ip";
+connectAttr "polyAppendVertex597.out" "polyTweak324.ip";
+connectAttr "polyTweak325.out" "polyAppendVertex599.ip";
+connectAttr "polyAppendVertex598.out" "polyTweak325.ip";
+connectAttr "polyAppendVertex599.out" "polySplit80.ip";
+connectAttr "polyTweak326.out" "polyAppendVertex600.ip";
+connectAttr "polySplit80.out" "polyTweak326.ip";
+connectAttr "polyAppendVertex600.out" "polyAppendVertex601.ip";
+connectAttr "polyAppendVertex601.out" "polyAppendVertex602.ip";
+connectAttr "polyAppendVertex602.out" "polyAppendVertex603.ip";
+connectAttr "polyTweak327.out" "polyAppendVertex604.ip";
+connectAttr "polyAppendVertex603.out" "polyTweak327.ip";
+connectAttr "polyTweak328.out" "polyAppendVertex605.ip";
+connectAttr "polyAppendVertex604.out" "polyTweak328.ip";
+connectAttr "polyAppendVertex605.out" "polyAppendVertex606.ip";
+connectAttr "polyAppendVertex606.out" "polyAppendVertex607.ip";
+connectAttr "polyTweak329.out" "polyAppendVertex608.ip";
+connectAttr "polyAppendVertex607.out" "polyTweak329.ip";
+connectAttr "polyAppendVertex608.out" "polyAppendVertex609.ip";
+connectAttr "polyAppendVertex609.out" "polyAppendVertex610.ip";
+connectAttr "polyAppendVertex610.out" "polyAppendVertex611.ip";
+connectAttr "polyAppendVertex611.out" "polyAppendVertex612.ip";
+connectAttr "polyAppendVertex612.out" "polyAppendVertex613.ip";
+connectAttr "polyAppendVertex613.out" "polyAppendVertex614.ip";
+connectAttr "polyAppendVertex614.out" "polyAppendVertex615.ip";
+connectAttr "polyTweak330.out" "polyMergeVert164.ip";
+connectAttr "polySurfaceShape22.wm" "polyMergeVert164.mp";
+connectAttr "polyAppendVertex615.out" "polyTweak330.ip";
+connectAttr "polyTweak331.out" "polyAppendVertex616.ip";
+connectAttr "polyMergeVert164.out" "polyTweak331.ip";
+connectAttr "polyAppendVertex616.out" "polyAppendVertex617.ip";
+connectAttr "polyAppendVertex617.out" "polyAppendVertex618.ip";
+connectAttr "polyAppendVertex618.out" "polyAppendVertex619.ip";
+connectAttr "polyAppendVertex619.out" "polyAppendVertex620.ip";
+connectAttr "polyAppendVertex620.out" "polyAppendVertex621.ip";
+connectAttr "polyAppendVertex621.out" "polyAppendVertex622.ip";
+connectAttr "polyAppendVertex622.out" "polyAppendVertex623.ip";
+connectAttr "polyAppendVertex623.out" "polyAppendVertex624.ip";
+connectAttr "polyAppendVertex624.out" "polyAppendVertex625.ip";
+connectAttr "polyTweak332.out" "polyAppendVertex626.ip";
+connectAttr "polyAppendVertex625.out" "polyTweak332.ip";
+connectAttr "polyAppendVertex626.out" "polyAppendVertex627.ip";
+connectAttr "polyAppendVertex627.out" "polyAppendVertex628.ip";
+connectAttr "polyAppendVertex628.out" "polyTweak333.ip";
+connectAttr "polyTweak333.out" "deleteComponent51.ig";
+connectAttr "deleteComponent51.og" "deleteComponent52.ig";
+connectAttr "polyTweak334.out" "polyAppendVertex629.ip";
+connectAttr "deleteComponent52.og" "polyTweak334.ip";
+connectAttr "polyAppendVertex629.out" "polyAppendVertex630.ip";
+connectAttr "polyAppendVertex630.out" "polyAppendVertex631.ip";
+connectAttr "polyAppendVertex631.out" "polyAppendVertex632.ip";
+connectAttr "polyAppendVertex632.out" "polyAppendVertex633.ip";
+connectAttr "polyAppendVertex633.out" "polyAppendVertex634.ip";
+connectAttr "polyAppendVertex634.out" "polyAppendVertex635.ip";
+connectAttr "polyAppendVertex635.out" "polyAppendVertex636.ip";
+connectAttr "polyTweak335.out" "polyAppendVertex637.ip";
+connectAttr "polyAppendVertex636.out" "polyTweak335.ip";
+connectAttr "polyAppendVertex637.out" "polyAppendVertex638.ip";
+connectAttr "polyTweak336.out" "polyAppendVertex639.ip";
+connectAttr "polyAppendVertex638.out" "polyTweak336.ip";
+connectAttr "polyAppendVertex639.out" "polyAppendVertex640.ip";
 connectAttr "blinn1SG.pa" ":renderPartition.st" -na;
 connectAttr "lambert2SG.pa" ":renderPartition.st" -na;
 connectAttr "lambert1SG.pa" ":renderPartition.st" -na;
