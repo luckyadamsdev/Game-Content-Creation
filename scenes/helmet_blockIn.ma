@@ -1,6 +1,6 @@
 //Maya ASCII 2027 scene
 //Name: helmet_blockIn.ma
-//Last modified: Thu, Nov 05, 2026 01:11:06 PM
+//Last modified: Thu, Nov 05, 2026 01:12:17 PM
 //Codeset: 1252
 requires maya "2027";
 currentUnit -l centimeter -a degree -t film;
@@ -9,23 +9,23 @@ fileInfo "product" "Maya 2027";
 fileInfo "version" "2027";
 fileInfo "cutIdentifier" "202607171511-52c21617ee";
 fileInfo "osv" "Windows 11 Education v2009 (Build: 26200)";
-fileInfo "UUID" "3DA781E9-4303-5DD6-8CE0-6993D1E8158C";
+fileInfo "UUID" "2BAA1648-46CF-89C2-8845-87B6C8E558F1";
 createNode transform -s -n "persp";
 	rename -uid "E9107D1E-4C56-CF77-AFE7-9E80DCB945FD";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" -13.952697202561794 21.611001223921971 82.352205979613871 ;
-	setAttr ".r" -type "double3" 710.06164842864655 1793.8000000005427 1.9995420695161233e-16 ;
+	setAttr ".t" -type "double3" -101.92229742474838 33.47774957087455 65.429049007055355 ;
+	setAttr ".r" -type "double3" 710.6616484285787 1737.8000000004895 0 ;
 	setAttr ".rp" -type "double3" 0 0 -8.8817841970012523e-16 ;
 	setAttr ".rpt" -type "double3" 2.9785993423986022e-16 2.2540323682565116e-16 -1.3935355736584613e-15 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "43F81F52-4B55-6F38-30F8-E38FEAC3929B";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999993;
-	setAttr ".coi" 80.469759338174669;
+	setAttr ".coi" 120.66454610192315;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
-	setAttr ".tp" -type "double3" -7.2661595344543457 4.497004508972168 2.9244678020477295 ;
+	setAttr ".tp" -type "double3" 0 12.328856945037842 7.7676794528961182 ;
 	setAttr ".hc" -type "string" "viewSet -p %camera";
 createNode transform -s -n "top";
 	rename -uid "186EAA85-4BE9-AC19-7AC7-A9B16A195DBF";
@@ -182680,6 +182680,7 @@ createNode mesh -n "gem_housing_geoShape" -p "gem_housing_geo";
 	setAttr ".dmb" yes;
 	setAttr ".de" 1;
 	setAttr ".bw" 4;
+	setAttr ".dr" 1;
 createNode transform -n "gem_geo" -p "grp_low_poly_helmet";
 	rename -uid "0AAD1ADC-4712-5EC6-0566-348877B0B37D";
 	addAttr -is true -ci true -k true -sn "currentUVSet" -ln "currentUVSet" -dt "string";
@@ -182956,6 +182957,7 @@ createNode mesh -n "gem_geoShape" -p "|grp_low_poly_helmet|gem_geo";
 	setAttr ".dmb" yes;
 	setAttr ".de" 1;
 	setAttr ".bw" 4;
+	setAttr ".dr" 1;
 createNode lightLinker -s -n "lightLinker1";
 	rename -uid "CCED5179-4B4B-1F8D-6871-D6B38BA608C4";
 	setAttr -s 8 ".lnk";
