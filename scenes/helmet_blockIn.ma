@@ -1,6 +1,6 @@
 //Maya ASCII 2026 scene
 //Name: helmet_blockIn.ma
-//Last modified: Wed, Nov 04, 2026 09:27:23 PM
+//Last modified: Wed, Nov 04, 2026 09:39:05 PM
 //Codeset: UTF-8
 requires maya "2026";
 currentUnit -l centimeter -a degree -t film;
@@ -9,12 +9,12 @@ fileInfo "product" "Maya 2026";
 fileInfo "version" "2026";
 fileInfo "cutIdentifier" "202507081222-4d6919b75c";
 fileInfo "osv" "Mac OS X 20.6.2";
-fileInfo "UUID" "A3AE436C-1849-6A39-813E-FD97E3137AE3";
+fileInfo "UUID" "BF6D581F-DF4E-B9A4-282F-2098248BB006";
 createNode transform -s -n "persp";
 	rename -uid "E9107D1E-4C56-CF77-AFE7-9E80DCB945FD";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" -68.213370087071752 12.917645572143741 18.851084355992569 ;
-	setAttr ".r" -type "double3" 2522.0616484702418 -432.19999999936539 0 ;
+	setAttr ".t" -type "double3" 60.592168544339557 10.560333752378851 -12.525397176667809 ;
+	setAttr ".r" -type "double3" 2884.461648493671 -620.20000000056859 0 ;
 	setAttr ".rp" -type "double3" 1.5543122344752192e-15 -3.5527136788005009e-15 0 ;
 	setAttr ".rpt" -type "double3" 3.9715922898775742e-16 2.2215895678254761e-16 -1.6129436169559209e-15 ;
 createNode camera -s -n "perspShape" -p "persp";
@@ -22,11 +22,11 @@ createNode camera -s -n "perspShape" -p "persp";
 	setAttr -k off ".v" no;
 	setAttr ".pze" yes;
 	setAttr ".fl" 34.999999999999993;
-	setAttr ".coi" 71.68936688134005;
+	setAttr ".coi" 61.676330766684458;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
-	setAttr ".tp" -type "double3" 0 15.496655464172363 -3.049832820892334 ;
+	setAttr ".tp" -type "double3" 0 15.358245402574539 -2.0593123435974121 ;
 	setAttr ".hc" -type "string" "viewSet -p %camera";
 createNode transform -s -n "top";
 	rename -uid "186EAA85-4BE9-AC19-7AC7-A9B16A195DBF";
@@ -184408,11 +184408,25 @@ createNode mesh -n "polySurfaceShape19" -p "polySurface3";
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
+	setAttr ".pv" -type "double2" 1 0 ;
 	setAttr ".uvst[0].uvsn" -type "string" "map1";
 	setAttr ".cuvs" -type "string" "map1";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
+	setAttr -s 12 ".pt";
+	setAttr ".pt[67]" -type "float3" 0 7.8231096e-08 -1.4156103e-07 ;
+	setAttr ".pt[68]" -type "float3" 0 -2.682209e-07 -3.4458935e-08 ;
+	setAttr ".pt[69]" -type "float3" 0 -4.1723251e-07 1.7136335e-07 ;
+	setAttr ".pt[74]" -type "float3" 0 6.1839819e-07 -9.6857548e-08 ;
+	setAttr ".pt[75]" -type "float3" 0 -7.1525574e-07 -3.5762787e-07 ;
+	setAttr ".pt[80]" -type "float3" 0 7.4505806e-09 7.4505806e-09 ;
+	setAttr ".pt[81]" -type "float3" 0 -7.4505806e-09 -1.4901161e-08 ;
+	setAttr ".pt[82]" -type "float3" 0 8.4005296e-07 -1.7881393e-07 ;
+	setAttr ".pt[164]" -type "float3" -1.1543323e-16 0 0 ;
+	setAttr ".pt[165]" -type "float3" 2.7567683e-16 3.7252903e-09 -3.7252903e-09 ;
+	setAttr ".pt[170]" -type "float3" 0 -1.1175871e-08 0 ;
+	setAttr ".pt[175]" -type "float3" 0 -3.7252903e-09 0 ;
 	setAttr ".dr" 1;
 createNode transform -n "polySurface4";
 	rename -uid "476158C6-934A-0E49-3C80-FFB711B6E1FA";
@@ -206622,6 +206636,646 @@ createNode polyTweak -n "polyTweak603";
 createNode deleteComponent -n "deleteComponent274";
 	rename -uid "51215EAB-4446-CB47-07CD-24B64DA9589E";
 	setAttr ".dc" -type "componentList" 30 "e[165:175]" "e[177]" "e[210]" "e[221]" "e[239]" "e[260]" "e[275]" "e[286]" "e[307]" "e[321]" "e[351]" "e[355]" "e[358]" "e[362]" "e[366]" "e[371]" "e[373]" "e[376]" "e[468]" "e[503]" "e[512]" "e[544]" "e[570]" "e[575]" "e[582]" "e[602]" "e[610]" "e[616]" "e[634]" "e[637]";
+createNode polySplit -n "polySplit142";
+	rename -uid "A86A57AE-C64D-FAAC-953C-559B10A986E7";
+	setAttr -s 9 ".e[0:8]"  0.47021899 0.47021899 0.52978098 0.52978098
+		 0.52978098 0.47021899 0.47021899 0.47021899 0.47021899;
+	setAttr -s 9 ".d[0:8]"  -2147483644 -2147483579 -2147483642 -2147483517 -2147483476 -2147483478 
+		-2147483421 -2147483555 -2147483644;
+	setAttr ".sma" 180;
+	setAttr ".m2015" yes;
+createNode polySplit -n "polySplit143";
+	rename -uid "64D7E3F3-994C-2F26-C16B-8B8AE34379F2";
+	setAttr -s 9 ".e[0:8]"  0.532601 0.467399 0.467399 0.467399 0.467399
+		 0.467399 0.532601 0.532601 0.532601;
+	setAttr -s 9 ".d[0:8]"  -2147483610 -2147483581 -2147483608 -2147483559 -2147483424 -2147483444 
+		-2147483443 -2147483513 -2147483610;
+	setAttr ".sma" 180;
+	setAttr ".m2015" yes;
+createNode polyTweak -n "polyTweak604";
+	rename -uid "85DD016D-7A48-6904-78B7-858292DE2E9E";
+	setAttr ".uopa" yes;
+	setAttr -s 156 ".tk[148:155]" -type "float3"  -0.12368941 0.016967773 -0.0032730103
+		 0.019469857 0.0020294189 -0.0006570816 0.036753476 0.0024967194 0.0028629303 0.43607879
+		 0.044363022 -0.093023539 -0.034750462 0.0033531189 0.0052289963 -0.019469798 0.0020294189
+		 -0.00065660477 0.12368941 0.016967773 -0.0032730103 0 0.33148575 0.052933693;
+createNode polySplit -n "polySplit144";
+	rename -uid "F1596D88-6449-79F3-879C-7B82EDAAA6D7";
+	setAttr -s 9 ".e[0:8]"  0.37785399 0.62214601 0.62214601 0.62214601
+		 0.62214601 0.62214601 0.37785399 0.37785399 0.37785399;
+	setAttr -s 9 ".d[0:8]"  -2147483603 -2147483597 -2147483602 -2147483504 -2147483429 -2147483438 
+		-2147483436 -2147483561 -2147483603;
+	setAttr ".sma" 180;
+	setAttr ".m2015" yes;
+createNode polyTweak -n "polyTweak605";
+	rename -uid "6DE15913-E64C-263C-8917-C4B3EA1D3272";
+	setAttr ".uopa" yes;
+	setAttr -s 164 ".tk[156:163]" -type "float3"  -0.0060760379 -0.00037384033
+		 0.00017654896 0.0088149905 0.00049972534 0.00037646294 -0.082442403 0.012727737 0.0073082447
+		 0 0.054632187 0.010237932 0.082442403 0.012727737 0.0073082447 -0.0088149309 0.00049972534
+		 0.00037646294 0.0061895847 -0.00037956238 0.0001783371 2.3857807e-10 -0.32126999
+		 -0.22104311;
+createNode polySplit -n "polySplit145";
+	rename -uid "3E4E2D1B-E74B-BF5C-2797-11A9AFF43E08";
+	setAttr -s 37 ".e[0:36]"  0.71304899 0.71304899 0.71304899 0.28695101
+		 0.71304899 0.28695101 0.71304899 0.28695101 0.28695101 0.28695101 0.28695101 0.28695101
+		 0.28695101 0.28695101 0.28695101 0.71304899 0.28695101 0.28695101 0.28695101 0.28695101
+		 0.28695101 0.71304899 0.28695101 0.28695101 0.28695101 0.28695101 0.28695101 0.28695101
+		 0.28695101 0.28695101 0.28695101 0.28695101 0.71304899 0.71304899 0.71304899 0.71304899
+		 0.71304899;
+	setAttr -s 37 ".d[0:36]"  -2147483427 -2147483428 -2147483426 -2147483334 -2147483425 -2147483422 
+		-2147483349 -2147483420 -2147483418 -2147483416 -2147483415 -2147483413 -2147483411 -2147483409 -2147483407 -2147483403 -2147483454 -2147483452 
+		-2147483533 -2147483617 -2147483620 -2147483569 -2147483623 -2147483626 -2147483629 -2147483632 -2147483635 -2147483637 -2147483640 -2147483643 
+		-2147483354 -2147483645 -2147483593 -2147483337 -2147483594 -2147483595 -2147483596;
+	setAttr ".sma" 180;
+	setAttr ".m2015" yes;
+createNode polyTweak -n "polyTweak606";
+	rename -uid "2CBA6B2E-4E4D-799B-77BD-CFA04847D4EA";
+	setAttr ".uopa" yes;
+	setAttr -s 172 ".tk[164:171]" -type "float3"  -0.008991003 0.0026721954
+		 0.0010271072 -0.063941419 -0.02895546 0.0048284531 0.021571726 0.014743805 -0.0025625229
+		 0.029146967 0.052806854 -0.004524231 -0.021571189 0.014743805 -0.0025625229 0.06394136
+		 -0.02895546 0.0048274994 0.0089906454 0.0026721954 0.0010271072 -4.2243625e-10 0.032339096
+		 0.02460289;
+createNode polySplit -n "polySplit146";
+	rename -uid "0A19F463-ED4A-929E-AC51-D8AA63467D5C";
+	setAttr -s 18 ".e[0:17]"  0.42676201 0.42676201 0.42676201 0.42676201
+		 0.42676201 0.57323802 0.57323802 0.57323802 0.57323802 0.57323802 0.57323802 0.57323802
+		 0.57323802 0.57323802 0.57323802 0.57323802 0.57323802 0.57323802;
+	setAttr -s 18 ".d[0:17]"  -2147483606 -2147483598 -2147483609 -2147483338 -2147483647 -2147483592 
+		-2147483353 -2147483591 -2147483590 -2147483589 -2147483588 -2147483587 -2147483586 -2147483585 -2147483584 -2147483615 -2147483614 -2147483611;
+	setAttr ".sma" 180;
+	setAttr ".m2015" yes;
+createNode polyTweak -n "polyTweak607";
+	rename -uid "AD13D1FF-534D-D2BD-E01E-6C86C96C41CE";
+	setAttr ".uopa" yes;
+	setAttr -s 209 ".tk[172:208]" -type "float3"  -0.024569333 0.020944595 -0.011184692
+		 -0.02417177 0.0010757446 0.0013341904 0.0094211102 0.0070858002 -0.0120368 0.054236174
+		 -0.01206398 0.0087537766 0.17183024 -0.0063037872 0.00074130297 0.10880381 0.003288269
+		 0.046896696 0.12694871 -0.0028171539 0.0046577454 0.17158908 -0.0028419495 -0.0038194656
+		 0.012555003 0.00086021423 0.0017337799 0.17498696 0.010692596 0.0082683563 0.093175054
+		 -0.094764709 -0.032939911 0.038117647 -0.015357971 -0.0040683746 0.062811255 0.011480331
+		 0.0077800751 0.1364249 0.01970768 -0.010933876 0.080980957 0.0016002655 -0.0053720474
+		 0.10725939 0.0005607605 -0.0021429062 0.1642862 -0.0036911964 0.001909256 0.12012142
+		 -0.11681318 0.015856743 -0.02057695 -0.15343666 0.019311905 -0.12012142 -0.11681318
+		 0.015855789 -0.16428626 -0.0036907196 0.001909256 -0.10725939 0.0005607605 -0.0021429062
+		 -0.080980957 0.0016002655 -0.0053720474 -0.13642496 0.019708633 -0.010933876 -0.062811077
+		 0.011480331 0.0077800751 -0.038117886 -0.015357971 -0.0040683746 -0.093175054 -0.094764709
+		 -0.032939911 -0.17498696 0.010692596 0.0082683563 -0.012554944 0.00086021423 0.0017328262
+		 -0.17158908 -0.0028419495 -0.0038204193 -0.12694871 -0.0028171539 0.0046577454 -0.10880369
+		 0.003288269 0.046897173 -0.17183024 -0.0063037872 0.00074127316 -0.054236293 -0.01206398
+		 0.0087535381 -0.0094211102 0.0070858002 -0.012037277 0.02417177 0.0010757446 0.0013346672
+		 0.024568677 0.020946503 -0.011183739;
+createNode polySplit -n "polySplit147";
+	rename -uid "B45B70E5-274D-93CC-29C8-4D9FDC047039";
+	setAttr -s 12 ".e[0:11]"  0.471057 0.528943 0.528943 0.471057 0.528943
+		 0.528943 0.528943 0.528943 0.528943 0.471057 0.471057 0.471057;
+	setAttr -s 12 ".d[0:11]"  -2147483622 -2147483210 -2147483572 -2147483255 -2147483621 -2147483541 
+		-2147483406 -2147483264 -2147483457 -2147483455 -2147483529 -2147483622;
+	setAttr ".sma" 180;
+	setAttr ".m2015" yes;
+createNode polyTweak -n "polyTweak608";
+	rename -uid "364D6FD5-4C41-D681-A015-599DFCF09967";
+	setAttr ".uopa" yes;
+	setAttr -s 227 ".tk[209:226]" -type "float3"  -0.0033043027 -0.0013580322
+		 0.00079226494 0.012647212 0.0013523102 -0.0011367798 0.050911784 0.010002136 -0.027772665
+		 0.02927953 -0.00053977966 0.018305421 0.032008648 0.0019187927 0.00013494492 0.053903282
+		 -0.0046577454 -0.030692101 0.020150423 0.0010528564 5.9127808e-05 0.043892682 0.0072956085
+		 0.0099759102 -0.0074121356 -3.6239624e-05 0.00048875809 -0.005328536 -4.0054321e-05
+		 0.00034618378 -0.019467831 0.0060329437 0.006269455 0.0131374 -0.0085220337 -0.0079278946
+		 -0.0096013546 -0.00014686584 0.00048351288 0.010417759 0.0019521713 -2.6702881e-05
+		 -0.035288513 0.012042999 0.012412071 -0.015467465 -0.00068569183 0.00022029877 -0.024986148
+		 -0.00078582764 0.00081253052 -0.014420301 -0.014493942 0.011553764;
+createNode polySplit -n "polySplit148";
+	rename -uid "19A064E1-DD4F-69BD-5C05-E49829B150C3";
+	setAttr -s 12 ".e[0:11]"  0.55118501 0.44881499 0.44881499 0.55118501
+		 0.44881499 0.44881499 0.44881499 0.44881499 0.44881499 0.55118501 0.55118501 0.55118501;
+	setAttr -s 12 ".d[0:11]"  -2147483625 -2147483211 -2147483573 -2147483254 -2147483624 -2147483543 
+		-2147483408 -2147483265 -2147483460 -2147483458 -2147483527 -2147483625;
+	setAttr ".sma" 180;
+	setAttr ".m2015" yes;
+createNode polyTweak -n "polyTweak609";
+	rename -uid "955A7DD6-B041-C5D6-B46E-1FACE6D1DECB";
+	setAttr ".uopa" yes;
+	setAttr -s 238 ".tk[227:237]" -type "float3"  0.018754303 0.00034141541
+		 -0.0049610138 -0.042499363 -0.012423515 0.00020217896 -0.061314881 -0.0046577454
+		 0.0020532608 0.052007616 -0.011724472 0.0093641281 0.046121418 -0.0007019043 0.038027763
+		 0.0032917897 8.0108643e-05 -0.016207695 -0.046121418 -0.0007019043 0.038028717 -0.052007198
+		 -0.011725426 0.0093641281 0.061314821 -0.0046567917 0.0020523071 0.019830346 0.00053310394
+		 0.0069913864 0.0020900776 0.0021181107 0.02487278;
+createNode polySplit -n "polySplit149";
+	rename -uid "83A78549-7745-4667-3BC2-7595F6443226";
+	setAttr -s 12 ".e[0:11]"  0.479752 0.520248 0.520248 0.479752 0.520248
+		 0.520248 0.520248 0.520248 0.520248 0.479752 0.479752 0.479752;
+	setAttr -s 12 ".d[0:11]"  -2147483634 -2147483214 -2147483576 -2147483251 -2147483633 -2147483549 
+		-2147483414 -2147483268 -2147483469 -2147483467 -2147483523 -2147483634;
+	setAttr ".sma" 180;
+	setAttr ".m2015" yes;
+createNode polyTweak -n "polyTweak610";
+	rename -uid "EA575DF6-DA49-884F-C35E-C79C10AABD88";
+	setAttr ".uopa" yes;
+	setAttr -s 249 ".tk[238:248]" -type "float3"  0.015500247 0.0081729889 0.0033893585
+		 0.016264498 0.0034322739 0.0007686615 0.016399145 0.0096282959 0.0041122437 -0.018888056
+		 -0.0015525818 -0.0010490417 -0.070754468 0.0025882721 -0.062708855 0.016480941 0.017528534
+		 -0.15456676 0.070754409 0.0025882721 -0.062708855 0.018888056 -0.0015506744 -0.0010490417
+		 -0.016399145 0.0096282959 0.0041122437 -0.0092341304 0.003162384 0.0011501312 -6.0535914e-09
+		 0.00050640106 0.010987282;
+createNode polySplit -n "polySplit150";
+	rename -uid "DDC144B4-A941-3C6A-E47B-32BE4F1CB98A";
+	setAttr -s 12 ".e[0:11]"  0.503079 0.496921 0.496921 0.503079 0.496921
+		 0.496921 0.496921 0.496921 0.496921 0.503079 0.503079 0.503079;
+	setAttr -s 12 ".d[0:11]"  -2147483642 -2147483217 -2147483361 -2147483248 -2147483362 -2147483355 
+		-2147483356 -2147483271 -2147483357 -2147483476 -2147483517 -2147483642;
+	setAttr ".sma" 180;
+	setAttr ".m2015" yes;
+createNode polyTweak -n "polyTweak611";
+	rename -uid "909FF498-8C4C-0F6C-02EF-8182D33A88F3";
+	setAttr ".uopa" yes;
+	setAttr -s 260 ".tk[249:259]" -type "float3"  -0.022006094 -0.00096321106
+		 0.00053501129 -0.0048335791 0.00022125244 0.00051689148 -0.011712551 0.0060329437
+		 0.0072221756 0.013168693 -0.0055942535 -0.007229805 0.061452031 -0.05373764 -0.0049247742
+		 -0.02202367 0.076400757 -0.19830322 -0.061452091 -0.05373764 -0.0049247742 -0.013168633
+		 -0.0055942535 -0.007229805 0.011712193 0.0060329437 0.0072221756 0.022006154 -0.00096130371
+		 0.00053501129 -6.7665695e-10 0.29310036 -0.31172895;
+createNode polyMirror -n "polyMirror30";
+	rename -uid "9F08D679-6B43-5B30-8EC7-85A4F5FFD400";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "f[*]";
+	setAttr ".ix" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1;
+	setAttr ".ad" 0;
+	setAttr ".ma" 1;
+	setAttr ".mtt" 1;
+	setAttr ".mt" 3.2393920421600342;
+	setAttr ".cm" yes;
+	setAttr ".fnf" 148;
+	setAttr ".lnf" 295;
+createNode polyTweak -n "polyTweak612";
+	rename -uid "05C59C59-134D-57A6-021F-D8930289DCB8";
+	setAttr ".uopa" yes;
+	setAttr -s 271 ".tk";
+	setAttr ".tk[11:176]" -type "float3"  0.15151364 -0.26457101 -0.0023413301
+		 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+		 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+		 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+		 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -8.512487e-05 0.07169015 0.045539424 0
+		 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+		 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+		 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+		 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -0.15113497 -0.26468545 -0.0023117661 0 0 0 0 0
+		 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+		 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+		 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.011757135 0.065980963
+		 -0.015896477 0.0009470582 -0.0087718964 0.00098228455 0.0094817877 -0.087545395 0.022046328
+		 0.027344108 -0.15547752 0.047460318 -0.010172665 -0.094781876 0.024960756 -0.00096523762
+		 -0.0082778931 0.0030474663 -0.011764169 0.0668469 -0.01301638 -1.3171673e-05 0.020385385
+		 0.061416984 0 0 0 0 0 0 0 2.9802322e-08 7.4505806e-09 2.2863466e-08 0.079983115 -0.2113096
+		 0 2.9802322e-08 7.4505806e-09 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+		 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0;
+	setAttr ".tk[178:270]" 0.0018651485 0.05997467 -0.014564514 0 0 0 0 0 0 0 0
+		 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+		 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -0.0019570589 0.059167862 -0.017555714 0
+		 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.0031291842
+		 -0.060773849 0.015228987 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+		 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+		 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+		 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.018661559 0.00021934509 -0.0010476112
+		 0.024289906 -0.00053787231 -0.0038509369 0.043774009 0.0013561249 -0.0079584122 0.023810267
+		 -0.0066642761 -0.015794754 0.0096901655 -0.0043716431 -0.0057721138 0 0.23744202
+		 -0.062863827 -0.0096899271 -0.0043716431 -0.0057721138 -0.023810625 -0.0066642761
+		 -0.015794754 -0.043774188 0.0013542175 -0.0079584122 -0.019727468 0.00023269653 -0.0011072159
+		 0.21811953 0.0086460114 -0.055282831;
+createNode polyTweakUV -n "polyTweakUV191";
+	rename -uid "1D009541-AD47-6A7D-041F-DF87804FC8E9";
+	setAttr ".uopa" yes;
+	setAttr -s 7 ".uvtk";
+	setAttr ".uvtk[243]" -type "float2" -0.00023150683 0.01876686 ;
+	setAttr ".uvtk[244]" -type "float2" 0.0019638005 -0.020975582 ;
+	setAttr ".uvtk[245]" -type "float2" 0.29956597 -0.07844802 ;
+	setAttr ".uvtk[668]" -type "float2" -0.00023150683 0.01876686 ;
+	setAttr ".uvtk[669]" -type "float2" 0.29956597 -0.07844802 ;
+	setAttr ".uvtk[678]" -type "float2" 0.0019638005 -0.020975582 ;
+createNode polyMergeVert -n "polyMergeVert310";
+	rename -uid "AFCCC4E0-9D48-3D64-F9E5-7AA341C8B6E4";
+	setAttr ".ics" -type "componentList" 1 "vtx[93:94]";
+	setAttr ".ix" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1;
+	setAttr ".d" 1e-06;
+createNode polyTweak -n "polyTweak613";
+	rename -uid "543F5477-0143-CED8-BDF1-C4BF93CF8453";
+	setAttr ".uopa" yes;
+	setAttr -s 2 ".tk[93:94]" -type "float3"  2.084223e-16 0 0 8.4252303e-16
+		 -0.53596115 -1.063097;
+createNode polyTweakUV -n "polyTweakUV192";
+	rename -uid "DEF1C293-CE4E-6551-8853-CE8DC1B1C313";
+	setAttr ".uopa" yes;
+	setAttr -s 7 ".uvtk";
+	setAttr ".uvtk[243]" -type "float2" 0.0027977042 -0.019477399 ;
+	setAttr ".uvtk[244]" -type "float2" 0.0015198903 -0.016234254 ;
+	setAttr ".uvtk[245]" -type "float2" 0.37641057 0.060005043 ;
+	setAttr ".uvtk[667]" -type "float2" 0.0027977042 -0.019477399 ;
+	setAttr ".uvtk[675]" -type "float2" 0.37641057 0.060005043 ;
+	setAttr ".uvtk[676]" -type "float2" 0.0015198903 -0.016234254 ;
+createNode polyMergeVert -n "polyMergeVert311";
+	rename -uid "9C6EB22C-0746-6909-7870-08A93DEA36B9";
+	setAttr ".ics" -type "componentList" 1 "vtx[93:94]";
+	setAttr ".ix" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1;
+	setAttr ".d" 1e-06;
+createNode polyTweak -n "polyTweak614";
+	rename -uid "8FBECCE1-7B43-9757-3B71-C5B9FC30125C";
+	setAttr ".uopa" yes;
+	setAttr -s 2 ".tk[94]" -type "float3"  -3.218065e-16 0.69318962 1.084638596;
+createNode polySplit -n "polySplit151";
+	rename -uid "8DFA014F-AF4D-4020-AE9D-6BA307DD65D4";
+	setAttr -s 2 ".e[0:1]"  0 0.72846699;
+	setAttr -s 2 ".d[0:1]"  -2147483446 -2147483497;
+	setAttr ".sma" 180;
+	setAttr ".m2015" yes;
+createNode polySplit -n "polySplit152";
+	rename -uid "E205D1BC-654F-FD53-D66B-9BB1785ABDA0";
+	setAttr -s 2 ".e[0:1]"  0 0;
+	setAttr -s 2 ".d[0:1]"  -2147483246 -2147483041;
+	setAttr ".sma" 180;
+	setAttr ".m2015" yes;
+createNode polySoftEdge -n "polySoftEdge45";
+	rename -uid "6262CBBE-A649-9B8A-563A-4ABD2917C918";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "e[*]";
+	setAttr ".ix" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1;
+	setAttr ".a" 180;
+createNode polyMergeVert -n "polyMergeVert312";
+	rename -uid "F3A8F43E-F84E-DB3B-FE94-F183493C7192";
+	setAttr ".ics" -type "componentList" 3 "vtx[107]" "vtx[187]" "vtx[255]";
+	setAttr ".ix" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1;
+	setAttr ".d" 1e-06;
+createNode polyTweak -n "polyTweak615";
+	rename -uid "D45916FE-E545-C698-A908-2B8D3C427054";
+	setAttr ".uopa" yes;
+	setAttr -s 5 ".tk";
+	setAttr ".tk[107]" -type "float3" 0.02057695 0.0031876564 0.0021286011 ;
+	setAttr ".tk[187]" -type "float3" 0 -0.006374836 -0.0042572021 ;
+	setAttr ".tk[255]" -type "float3" -0.02057695 0.0031876564 0.0021286011 ;
+	setAttr ".tk[313]" -type "float3" 0 4.4703484e-08 1.4901161e-08 ;
+createNode polyTweakUV -n "polyTweakUV193";
+	rename -uid "FCB4868A-794B-19E6-78A2-F593528941AA";
+	setAttr ".uopa" yes;
+	setAttr -s 7 ".uvtk";
+	setAttr ".uvtk[158]" -type "float2" -0.0034771566 -0.0053140004 ;
+	setAttr ".uvtk[161]" -type "float2" 0.0053693689 -0.033611659 ;
+	setAttr ".uvtk[379]" -type "float2" 0.0053693689 -0.033611659 ;
+	setAttr ".uvtk[594]" -type "float2" -0.0034771566 -0.0053140004 ;
+	setAttr ".uvtk[598]" -type "float2" 0.0057883151 -0.052147269 ;
+	setAttr ".uvtk[599]" -type "float2" 0.0057883151 -0.052147269 ;
+createNode polyMergeVert -n "polyMergeVert313";
+	rename -uid "50ABED83-FF42-45F8-9F77-D1836178CFD5";
+	setAttr ".ics" -type "componentList" 2 "vtx[66]" "vtx[174]";
+	setAttr ".ix" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1;
+	setAttr ".d" 1e-06;
+createNode polyTweakUV -n "polyTweakUV194";
+	rename -uid "D1B54EAF-5A49-AD11-C642-91BCF787A23F";
+	setAttr ".uopa" yes;
+	setAttr -s 7 ".uvtk";
+	setAttr ".uvtk[147]" -type "float2" 0.026089607 -0.039495267 ;
+	setAttr ".uvtk[377]" -type "float2" 2.8755067e-05 0.0026445861 ;
+	setAttr ".uvtk[378]" -type "float2" 0.026089607 -0.039495267 ;
+	setAttr ".uvtk[580]" -type "float2" 2.8755045e-05 0.0026445861 ;
+	setAttr ".uvtk[581]" -type "float2" -0.043291319 0.03916955 ;
+	setAttr ".uvtk[585]" -type "float2" -0.043291319 0.03916955 ;
+createNode polyMergeVert -n "polyMergeVert314";
+	rename -uid "942A2A07-124D-7A64-5BFE-46965B9B0241";
+	setAttr ".ics" -type "componentList" 2 "vtx[63]" "vtx[173]";
+	setAttr ".ix" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1;
+	setAttr ".d" 1e-06;
+createNode polyTweakUV -n "polyTweakUV195";
+	rename -uid "95FA4056-D44E-7F63-2D1F-E18AE3C9E14E";
+	setAttr ".uopa" yes;
+	setAttr -s 7 ".uvtk";
+	setAttr ".uvtk[140]" -type "float2" 0.031570457 0.055876996 ;
+	setAttr ".uvtk[373]" -type "float2" 0.031570457 0.055876996 ;
+	setAttr ".uvtk[374]" -type "float2" 4.6886271e-05 0.00081732601 ;
+	setAttr ".uvtk[568]" -type "float2" 0.027030867 0.095263526 ;
+	setAttr ".uvtk[569]" -type "float2" 0.027030867 0.095263526 ;
+	setAttr ".uvtk[802]" -type "float2" 4.6886275e-05 0.00081732596 ;
+createNode polyMergeVert -n "polyMergeVert315";
+	rename -uid "B5196CAF-5441-C05E-73CA-62870BBB6957";
+	setAttr ".ics" -type "componentList" 2 "vtx[62]" "vtx[171]";
+	setAttr ".ix" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1;
+	setAttr ".d" 1e-06;
+createNode polyTweakUV -n "polyTweakUV196";
+	rename -uid "AA16069D-B741-984A-E78E-94A0CA40AD85";
+	setAttr ".uopa" yes;
+	setAttr -s 9 ".uvtk";
+	setAttr ".uvtk[138]" -type "float2" -0.033556249 0.080488034 ;
+	setAttr ".uvtk[139]" -type "float2" 0.066821501 0.044615455 ;
+	setAttr ".uvtk[371]" -type "float2" -0.033556249 0.080488034 ;
+	setAttr ".uvtk[372]" -type "float2" 0.00015736411 -4.6387747e-09 ;
+	setAttr ".uvtk[564]" -type "float2" -0.029686596 0.088427946 ;
+	setAttr ".uvtk[565]" -type "float2" -0.029686596 0.088427946 ;
+	setAttr ".uvtk[566]" -type "float2" 0.14188933 0.038444124 ;
+	setAttr ".uvtk[792]" -type "float2" 0.00015736379 -8.364065e-09 ;
+createNode polyMergeVert -n "polyMergeVert316";
+	rename -uid "A11AEB4B-774F-1EA9-7FD9-D1B2AFECE724";
+	setAttr ".ics" -type "componentList" 2 "vtx[61]" "vtx[170]";
+	setAttr ".ix" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1;
+	setAttr ".d" 1e-06;
+createNode polyMergeVert -n "polyMergeVert317";
+	rename -uid "27482B21-4645-A84A-F5AE-AB8A4D02EAC2";
+	setAttr ".ics" -type "componentList" 3 "vtx[160]" "vtx[186]" "vtx[301]";
+	setAttr ".ix" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1;
+	setAttr ".d" 1e-06;
+createNode polyTweak -n "polyTweak616";
+	rename -uid "4768B12E-954C-EB46-4556-7F8A45829C46";
+	setAttr ".uopa" yes;
+	setAttr -s 15 ".tk";
+	setAttr ".tk[61]" -type "float3" 0 1.73226e-07 2.9429793e-07 ;
+	setAttr ".tk[62]" -type "float3" 0 9.4249845e-07 -2.30968e-07 ;
+	setAttr ".tk[63]" -type "float3" 0 -3.5390258e-07 3.5949051e-07 ;
+	setAttr ".tk[64]" -type "float3" 0 3.7252903e-09 -7.4505806e-09 ;
+	setAttr ".tk[65]" -type "float3" 0 1.4901161e-08 -3.7252903e-09 ;
+	setAttr ".tk[66]" -type "float3" 6.5435069e-17 0 0 ;
+	setAttr ".tk[160]" -type "float3" 0.02202367 -0.00070381165 0.0035591125 ;
+	setAttr ".tk[170]" -type "float3" -1.3429046e-16 0 0 ;
+	setAttr ".tk[171]" -type "float3" 3.1061651e-16 0 0 ;
+	setAttr ".tk[172]" -type "float3" 0 -7.4505806e-09 -3.7252903e-09 ;
+	setAttr ".tk[173]" -type "float3" -2.1328967e-16 0 0 ;
+	setAttr ".tk[174]" -type "float3" 0 0 -3.0361116e-07 ;
+	setAttr ".tk[185]" -type "float3" 0 1.8626451e-08 1.8626451e-09 ;
+	setAttr ".tk[186]" -type "float3" -3.2422743e-16 0.0014076233 -0.0071191788 ;
+	setAttr ".tk[301]" -type "float3" -0.02202367 -0.00070381165 0.0035591125 ;
+createNode polyTweakUV -n "polyTweakUV197";
+	rename -uid "004A5E40-EC48-537C-5026-558C16513ED8";
+	setAttr ".uopa" yes;
+	setAttr -s 7 ".uvtk";
+	setAttr ".uvtk[128]" -type "float2" -0.036130924 -0.030676864 ;
+	setAttr ".uvtk[133]" -type "float2" -0.0022029914 0.013484225 ;
+	setAttr ".uvtk[369]" -type "float2" -0.0022029914 0.013484225 ;
+	setAttr ".uvtk[551]" -type "float2" -0.021459907 0.047583725 ;
+	setAttr ".uvtk[771]" -type "float2" -0.0016634858 -0.012343423 ;
+	setAttr ".uvtk[772]" -type "float2" -0.0016634858 -0.012343423 ;
+createNode polyMergeVert -n "polyMergeVert318";
+	rename -uid "71FF843A-8940-356C-53DC-DFAA0F446973";
+	setAttr ".ics" -type "componentList" 2 "vtx[59]" "vtx[169]";
+	setAttr ".ix" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1;
+	setAttr ".d" 1e-06;
+createNode polyTweakUV -n "polyTweakUV198";
+	rename -uid "491828A8-F042-8E3A-42B4-DC96B345D1AB";
+	setAttr ".uopa" yes;
+	setAttr -s 7 ".uvtk";
+	setAttr ".uvtk[239]" -type "float2" 0.35737097 0.12239206 ;
+	setAttr ".uvtk[240]" -type "float2" 0.040501721 -0.045481797 ;
+	setAttr ".uvtk[241]" -type "float2" 0.050671428 -0.05919376 ;
+	setAttr ".uvtk[601]" -type "float2" 0.35737097 0.12239206 ;
+	setAttr ".uvtk[602]" -type "float2" 0.040501721 -0.045481797 ;
+	setAttr ".uvtk[677]" -type "float2" 0.050671428 -0.05919376 ;
+createNode polyMergeVert -n "polyMergeVert319";
+	rename -uid "CBEE9B60-5442-6A49-1E27-60BC7A7E99F3";
+	setAttr ".ics" -type "componentList" 1 "vtx[90:91]";
+	setAttr ".ix" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1;
+	setAttr ".d" 1e-06;
+createNode polyTweak -n "polyTweak617";
+	rename -uid "271726BE-D44B-4C7C-5805-48865F5A3F8C";
+	setAttr ".uopa" yes;
+	setAttr -s 7 ".tk";
+	setAttr ".tk[57]" -type "float3" 0 -1.2107193e-08 1.8626451e-09 ;
+	setAttr ".tk[58]" -type "float3" 0 -5.5879354e-09 0 ;
+	setAttr ".tk[59]" -type "float3" 0 1.8626451e-07 -4.6566129e-07 ;
+	setAttr ".tk[90]" -type "float3" 1.2695123e-16 0.30371094 0.080000877 ;
+	setAttr ".tk[91]" -type "float3" -3.275284e-16 0 0 ;
+	setAttr ".tk[169]" -type "float3" 2.6512459e-16 0 0 ;
+createNode polyTweakUV -n "polyTweakUV199";
+	rename -uid "7C43C0FF-364A-20D6-F484-7AAAF1C451E7";
+	setAttr ".uopa" yes;
+	setAttr -s 7 ".uvtk";
+	setAttr ".uvtk[239]" -type "float2" -0.00031328842 0.00019443408 ;
+	setAttr ".uvtk[240]" -type "float2" 0.032247875 -0.037671581 ;
+	setAttr ".uvtk[241]" -type "float2" -0.096201748 0.071008518 ;
+	setAttr ".uvtk[600]" -type "float2" -0.00031328842 0.00019443408 ;
+	setAttr ".uvtk[675]" -type "float2" 0.032247875 -0.037671581 ;
+	setAttr ".uvtk[676]" -type "float2" -0.096201748 0.071008518 ;
+createNode polyMergeVert -n "polyMergeVert320";
+	rename -uid "213E8E76-FC47-5258-B68B-FD8ECD49DFE2";
+	setAttr ".ics" -type "componentList" 1 "vtx[90:91]";
+	setAttr ".ix" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1;
+	setAttr ".d" 1e-06;
+createNode polyTweak -n "polyTweak618";
+	rename -uid "419E9622-2941-1CE0-C855-F9A23C884462";
+	setAttr ".uopa" yes;
+	setAttr -s 2 ".tk[91]" -type "float3"  -7.8915e-16 -0.064127922 -0.16267014;
+createNode polyTweakUV -n "polyTweakUV200";
+	rename -uid "D262B81E-A144-E9FD-732C-6B9EC658ADBB";
+	setAttr ".uopa" yes;
+	setAttr -s 7 ".uvtk";
+	setAttr ".uvtk[236]" -type "float2" -6.7972273e-05 3.097103e-05 ;
+	setAttr ".uvtk[237]" -type "float2" 0.0031393082 -0.013063009 ;
+	setAttr ".uvtk[238]" -type "float2" -0.06811168 0.026356708 ;
+	setAttr ".uvtk[665]" -type "float2" -6.7972273e-05 3.0971027e-05 ;
+	setAttr ".uvtk[668]" -type "float2" 0.0031393082 -0.013063009 ;
+	setAttr ".uvtk[669]" -type "float2" -0.06811168 0.026356708 ;
+createNode polyMergeVert -n "polyMergeVert321";
+	rename -uid "79F85479-D34A-1F9A-46FD-0D8CAFD9DFED";
+	setAttr ".ics" -type "componentList" 1 "vtx[88:89]";
+	setAttr ".ix" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1;
+	setAttr ".d" 1e-06;
+createNode polyTweak -n "polyTweak619";
+	rename -uid "C83C2597-4B4D-4020-7D6E-78939E86CC34";
+	setAttr ".uopa" yes;
+	setAttr -s 2 ".tk[88:89]" -type "float3"  -1.0345351e-16 0 0 1.2397778e-16
+		 -0.086838722 -0.023596764;
+createNode polyTweakUV -n "polyTweakUV201";
+	rename -uid "4227F4C4-8E4D-1D9F-D985-7BA85F4D5AC5";
+	setAttr ".uopa" yes;
+	setAttr -s 7 ".uvtk";
+	setAttr ".uvtk[212]" -type "float2" 0.030379161 0.0084580434 ;
+	setAttr ".uvtk[224]" -type "float2" 0.0023476107 0.00052329747 ;
+	setAttr ".uvtk[225]" -type "float2" -0.99765241 0.00052329747 ;
+	setAttr ".uvtk[632]" -type "float2" 0.030379159 0.0084580434 ;
+	setAttr ".uvtk[650]" -type "float2" 0.0023476107 0.00052329747 ;
+	setAttr ".uvtk[651]" -type "float2" -0.99765241 0.00052329747 ;
+createNode polyMergeVert -n "polyMergeVert322";
+	rename -uid "C322BCEE-964B-3883-3373-31B5D61D2C4B";
+	setAttr ".ics" -type "componentList" 2 "vtx[79]" "vtx[83]";
+	setAttr ".ix" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1;
+	setAttr ".d" 1e-06;
+createNode polyTweak -n "polyTweak620";
+	rename -uid "156755D4-8248-8B21-84AE-9AB486EF5EFC";
+	setAttr ".uopa" yes;
+	setAttr -s 2 ".tk";
+	setAttr ".tk[79]" -type "float3" -3.0488898e-16 0 0 ;
+	setAttr ".tk[83]" -type "float3" 4.2670269e-16 0.18564224 -0.10780406 ;
+createNode polyTweakUV -n "polyTweakUV202";
+	rename -uid "C4A736DB-9047-776B-1BF3-AF9C4EC47FEE";
+	setAttr ".uopa" yes;
+	setAttr -s 7 ".uvtk";
+	setAttr ".uvtk[162]" -type "float2" -9.8561723e-05 -0.0021285051 ;
+	setAttr ".uvtk[165]" -type "float2" 0.0039665005 0.017749047 ;
+	setAttr ".uvtk[230]" -type "float2" 0.30726224 0.017749047 ;
+	setAttr ".uvtk[588]" -type "float2" 0.0039665005 0.017749047 ;
+	setAttr ".uvtk[589]" -type "float2" 0.30726224 0.017749047 ;
+	setAttr ".uvtk[701]" -type "float2" -9.8561737e-05 -0.0021285051 ;
+createNode polyMergeVert -n "polyMergeVert323";
+	rename -uid "A302D679-BE4B-B76A-92AA-DBBE6888AE84";
+	setAttr ".ics" -type "componentList" 2 "vtx[67]" "vtx[84]";
+	setAttr ".ix" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1;
+	setAttr ".d" 1e-06;
+createNode polyTweak -n "polyTweak621";
+	rename -uid "88C8C645-2A48-FEDE-2A32-73A667FEB3E7";
+	setAttr ".uopa" yes;
+	setAttr -s 2 ".tk";
+	setAttr ".tk[67]" -type "float3" 4.6596082e-16 0 0 ;
+	setAttr ".tk[84]" -type "float3" 7.2732231e-16 -0.4077816 -0.51980114 ;
+createNode polyTweakUV -n "polyTweakUV203";
+	rename -uid "F4C67547-904F-DEA5-1549-E6BE94F00D83";
+	setAttr ".uopa" yes;
+	setAttr -s 6 ".uvtk";
+	setAttr ".uvtk[44]" -type "float2" 0.081722222 0.14065063 ;
+	setAttr ".uvtk[163]" -type "float2" 0.0075802691 -0.024349168 ;
+	setAttr ".uvtk[167]" -type "float2" 0.0054421495 -0.0097455867 ;
+	setAttr ".uvtk[327]" -type "float2" 0.15292226 -0.15742785 ;
+	setAttr ".uvtk[328]" -type "float2" -0.4191817 -0.024349168 ;
+createNode polyMergeVert -n "polyMergeVert324";
+	rename -uid "22D88BCB-654D-9F70-E399-B69A2A45697F";
+	setAttr ".ics" -type "componentList" 2 "vtx[27]" "vtx[138]";
+	setAttr ".ix" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1;
+	setAttr ".d" 1e-06;
+createNode polyTweak -n "polyTweak622";
+	rename -uid "6BBE20FF-EC49-9DD2-11E2-71933F58AD68";
+	setAttr ".uopa" yes;
+	setAttr -s 2 ".tk";
+	setAttr ".tk[138]" -type "float3" 0.015799165 0.5421586 0.6924448 ;
+createNode polyTweakUV -n "polyTweakUV204";
+	rename -uid "0CAB1955-084B-A9D7-9168-04B3B5DDA639";
+	setAttr ".uopa" yes;
+	setAttr -s 6 ".uvtk";
+	setAttr ".uvtk[435]" -type "float2" 0.081722222 0.14065063 ;
+	setAttr ".uvtk[438]" -type "float2" 0.15292226 -0.15742785 ;
+	setAttr ".uvtk[582]" -type "float2" 0.0075802691 -0.024349168 ;
+	setAttr ".uvtk[583]" -type "float2" -0.4191817 -0.024349168 ;
+	setAttr ".uvtk[656]" -type "float2" 0.0054421495 -0.0097455867 ;
+createNode polyMergeVert -n "polyMergeVert325";
+	rename -uid "6CB9DD42-334B-B2AD-BB13-F19B52E841C1";
+	setAttr ".ics" -type "componentList" 2 "vtx[207]" "vtx[277]";
+	setAttr ".ix" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1;
+	setAttr ".d" 1e-06;
+createNode polyTweak -n "polyTweak623";
+	rename -uid "3723C639-C945-CD46-C5AC-98B9D40C5BE4";
+	setAttr ".uopa" yes;
+	setAttr -s 2 ".tk";
+	setAttr ".tk[277]" -type "float3" -0.015799165 0.5421586 0.6924448 ;
+createNode polyTweakUV -n "polyTweakUV205";
+	rename -uid "530C97BE-C34A-F443-5CC9-57B6B1EBE5BC";
+	setAttr ".uopa" yes;
+	setAttr -s 7 ".uvtk";
+	setAttr ".uvtk[162]" -type "float2" -0.0020613831 0.015664238 ;
+	setAttr ".uvtk[165]" -type "float2" 0.013405045 0.059561223 ;
+	setAttr ".uvtk[386]" -type "float2" -0.0021599447 0.013535756 ;
+	setAttr ".uvtk[583]" -type "float2" 0.011609458 -0.10597745 ;
+	setAttr ".uvtk[694]" -type "float2" 0.0053189043 0.0039178268 ;
+	setAttr ".uvtk[695]" -type "float2" 0.0054174662 0.0060463087 ;
+createNode polyMergeVert -n "polyMergeVert326";
+	rename -uid "117D4CC2-254D-0AA1-2DFC-8289F57120BF";
+	setAttr ".ics" -type "componentList" 2 "vtx[67]" "vtx[175]";
+	setAttr ".ix" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1;
+	setAttr ".d" 1e-06;
+createNode polyTweakUV -n "polyTweakUV206";
+	rename -uid "CF7B44C1-B844-E0FA-D5D5-7F9B9F763094";
+	setAttr ".uopa" yes;
+	setAttr -s 7 ".uvtk";
+	setAttr ".uvtk[170]" -type "float2" -0.0098105241 -0.036780339 ;
+	setAttr ".uvtk[367]" -type "float2" -0.0098105241 -0.036780339 ;
+	setAttr ".uvtk[368]" -type "float2" 0.0071848626 0.010586668 ;
+	setAttr ".uvtk[659]" -type "float2" -0.024291385 0.032355085 ;
+	setAttr ".uvtk[660]" -type "float2" -0.024291385 0.032355085 ;
+	setAttr ".uvtk[760]" -type "float2" 0.0071848626 0.010586668 ;
+createNode polyMergeVert -n "polyMergeVert327";
+	rename -uid "09418D60-D240-D38A-5ADE-09A53593722E";
+	setAttr ".ics" -type "componentList" 2 "vtx[68]" "vtx[164]";
+	setAttr ".ix" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1;
+	setAttr ".d" 1e-06;
+createNode polyTweakUV -n "polyTweakUV207";
+	rename -uid "A6B63651-A846-EC26-6C14-528377DA1064";
+	setAttr ".uopa" yes;
+	setAttr -s 7 ".uvtk";
+	setAttr ".uvtk[177]" -type "float2" -3.7381617e-06 0.05860601 ;
+	setAttr ".uvtk[368]" -type "float2" -0.0059843049 -0.0062627899 ;
+	setAttr ".uvtk[369]" -type "float2" -3.7381617e-06 0.05860601 ;
+	setAttr ".uvtk[586]" -type "float2" 0.044551626 -0.039277684 ;
+	setAttr ".uvtk[587]" -type "float2" 0.044551626 -0.039277684 ;
+	setAttr ".uvtk[737]" -type "float2" -0.0059843049 -0.0062627899 ;
+createNode polyMergeVert -n "polyMergeVert328";
+	rename -uid "711701A8-1648-E0DE-F023-6B82B2B79444";
+	setAttr ".ics" -type "componentList" 2 "vtx[69]" "vtx[164]";
+	setAttr ".ix" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1;
+	setAttr ".d" 1e-06;
+createNode polyTweakUV -n "polyTweakUV208";
+	rename -uid "86751F3C-404E-89E4-17EE-D3A14162615E";
+	setAttr ".uopa" yes;
+	setAttr -s 7 ".uvtk";
+	setAttr ".uvtk[194]" -type "float2" 0.0093658771 0.0069714854 ;
+	setAttr ".uvtk[369]" -type "float2" 0.0093658771 0.0069714854 ;
+	setAttr ".uvtk[370]" -type "float2" 2.5454699e-05 9.6764466e-05 ;
+	setAttr ".uvtk[599]" -type "float2" 0.0083684502 0.070738032 ;
+	setAttr ".uvtk[600]" -type "float2" 0.0083684502 0.070738032 ;
+	setAttr ".uvtk[767]" -type "float2" 2.5454699e-05 9.6764466e-05 ;
+createNode polyMergeVert -n "polyMergeVert329";
+	rename -uid "5E7E8E01-A840-7C53-331D-4EBF76F490BD";
+	setAttr ".ics" -type "componentList" 2 "vtx[74]" "vtx[164]";
+	setAttr ".ix" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1;
+	setAttr ".d" 1e-06;
+createNode polyTweakUV -n "polyTweakUV209";
+	rename -uid "B96B0BFB-0B4F-7531-F718-6A9F39202E05";
+	setAttr ".uopa" yes;
+	setAttr -s 7 ".uvtk";
+	setAttr ".uvtk[199]" -type "float2" 0.0040638852 0.0028128456 ;
+	setAttr ".uvtk[370]" -type "float2" 6.5799875e-05 0.072260261 ;
+	setAttr ".uvtk[371]" -type "float2" 0.0040638852 0.0028128456 ;
+	setAttr ".uvtk[603]" -type "float2" 6.5798944e-05 0.072260261 ;
+	setAttr ".uvtk[605]" -type "float2" 0.0040730787 0.0029413493 ;
+	setAttr ".uvtk[609]" -type "float2" 0.0040730787 0.0029413493 ;
+createNode polyMergeVert -n "polyMergeVert330";
+	rename -uid "9DE75977-ED4D-8095-24D3-2A83884B695D";
+	setAttr ".ics" -type "componentList" 2 "vtx[75]" "vtx[164]";
+	setAttr ".ix" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1;
+	setAttr ".d" 1e-06;
+createNode polyTweakUV -n "polyTweakUV210";
+	rename -uid "3E5F4EE2-334D-CF8C-2CA4-C78B4C807D64";
+	setAttr ".uopa" yes;
+	setAttr -s 7 ".uvtk";
+	setAttr ".uvtk[223]" -type "float2" -0.0030414374 0.025192043 ;
+	setAttr ".uvtk[373]" -type "float2" -0.0014497006 0.0016004511 ;
+	setAttr ".uvtk[374]" -type "float2" -0.0030414374 0.025192043 ;
+	setAttr ".uvtk[633]" -type "float2" -0.0033194902 0.01639005 ;
+	setAttr ".uvtk[634]" -type "float2" -0.0033194902 0.01639005 ;
+	setAttr ".uvtk[765]" -type "float2" -0.0014497003 0.0016004515 ;
+createNode polyMergeVert -n "polyMergeVert331";
+	rename -uid "7E2750BC-B44A-AA07-A117-5084D63F52E9";
+	setAttr ".ics" -type "componentList" 2 "vtx[82]" "vtx[165]";
+	setAttr ".ix" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1;
+	setAttr ".d" 1e-06;
+createNode polyTweakUV -n "polyTweakUV211";
+	rename -uid "FDE2987F-A74A-CF3B-F200-43B632E71432";
+	setAttr ".uopa" yes;
+	setAttr -s 7 ".uvtk";
+	setAttr ".uvtk[216]" -type "float2" -0.030349126 -0.027646078 ;
+	setAttr ".uvtk[371]" -type "float2" -0.030349126 -0.027646078 ;
+	setAttr ".uvtk[372]" -type "float2" 0.00017110391 -0.00076688011 ;
+	setAttr ".uvtk[620]" -type "float2" -0.079187118 -0.062592633 ;
+	setAttr ".uvtk[621]" -type "float2" -0.079187118 -0.062592633 ;
+	setAttr ".uvtk[626]" -type "float2" 0.00017110397 -0.00076688011 ;
+createNode polyMergeVert -n "polyMergeVert332";
+	rename -uid "CF249463-904C-67AF-09F6-F98848E0D99A";
+	setAttr ".ics" -type "componentList" 2 "vtx[80]" "vtx[164]";
+	setAttr ".ix" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1;
+	setAttr ".d" 1e-06;
+createNode polySplit -n "polySplit153";
+	rename -uid "36B61505-3243-E8FF-37CD-68A1E2E246AC";
+	setAttr -s 3 ".e[0:2]"  0 1 0;
+	setAttr -s 3 ".d[0:2]"  -2147483223 -2147483520 -2147483566;
+	setAttr ".sma" 180;
+	setAttr ".m2015" yes;
+createNode polySoftEdge -n "polySoftEdge46";
+	rename -uid "65E980DC-1E40-72F9-9CD1-8592AC7CD69B";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 35 "e[83]" "e[85]" "e[87]" "e[89]" "e[91]" "e[93]" "e[95]" "e[97]" "e[102:103]" "e[105]" "e[107]" "e[110]" "e[112]" "e[114]" "e[117:119]" "e[121]" "e[123]" "e[125]" "e[128:129]" "e[132]" "e[134]" "e[138]" "e[140:144]" "e[157:158]" "e[166]" "e[171]" "e[257]" "e[270]" "e[282]" "e[289]" "e[293]" "e[298]" "e[302:307]" "e[310:316]" "e[578]";
+	setAttr ".ix" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1;
+	setAttr ".a" 0;
 select -ne :time1;
 	setAttr ".o" 15;
 	setAttr ".unw" 15;
@@ -206719,7 +207373,8 @@ connectAttr "polyMirror27.out" "polySurfaceShape17.i";
 connectAttr "polyTweakUV161.uvtk[0]" "polySurfaceShape17.uvst[0].uvtw";
 connectAttr "deleteComponent274.og" "polySurfaceShape18.i";
 connectAttr "polyTweakUV190.uvtk[0]" "polySurfaceShape18.uvst[0].uvtw";
-connectAttr "polySoftEdge8.out" "polySurfaceShape19.i";
+connectAttr "polySoftEdge46.out" "polySurfaceShape19.i";
+connectAttr "polyTweakUV211.uvtk[0]" "polySurfaceShape19.uvst[0].uvtw";
 connectAttr "polySoftEdge18.out" "polySurfaceShape20.i";
 connectAttr "polyTweakUV90.uvtk[0]" "polySurfaceShape20.uvst[0].uvtw";
 connectAttr "polyMergeVert300.out" "polySurfaceShape22.i";
@@ -209826,6 +210481,111 @@ connectAttr "polyTweak602.out" "polySplit141.ip";
 connectAttr "polyMergeVert309.out" "polyTweak602.ip";
 connectAttr "polySplit141.out" "polyTweak603.ip";
 connectAttr "polyTweak603.out" "deleteComponent274.ig";
+connectAttr "polySoftEdge8.out" "polySplit142.ip";
+connectAttr "polyTweak604.out" "polySplit143.ip";
+connectAttr "polySplit142.out" "polyTweak604.ip";
+connectAttr "polyTweak605.out" "polySplit144.ip";
+connectAttr "polySplit143.out" "polyTweak605.ip";
+connectAttr "polyTweak606.out" "polySplit145.ip";
+connectAttr "polySplit144.out" "polyTweak606.ip";
+connectAttr "polyTweak607.out" "polySplit146.ip";
+connectAttr "polySplit145.out" "polyTweak607.ip";
+connectAttr "polyTweak608.out" "polySplit147.ip";
+connectAttr "polySplit146.out" "polyTweak608.ip";
+connectAttr "polyTweak609.out" "polySplit148.ip";
+connectAttr "polySplit147.out" "polyTweak609.ip";
+connectAttr "polyTweak610.out" "polySplit149.ip";
+connectAttr "polySplit148.out" "polyTweak610.ip";
+connectAttr "polyTweak611.out" "polySplit150.ip";
+connectAttr "polySplit149.out" "polyTweak611.ip";
+connectAttr "polyTweak612.out" "polyMirror30.ip";
+connectAttr "polySurfaceShape19.wm" "polyMirror30.mp";
+connectAttr "polySplit150.out" "polyTweak612.ip";
+connectAttr "polyMirror30.out" "polyTweakUV191.ip";
+connectAttr "polyTweak613.out" "polyMergeVert310.ip";
+connectAttr "polySurfaceShape19.wm" "polyMergeVert310.mp";
+connectAttr "polyTweakUV191.out" "polyTweak613.ip";
+connectAttr "polyMergeVert310.out" "polyTweakUV192.ip";
+connectAttr "polyTweak614.out" "polyMergeVert311.ip";
+connectAttr "polySurfaceShape19.wm" "polyMergeVert311.mp";
+connectAttr "polyTweakUV192.out" "polyTweak614.ip";
+connectAttr "polyMergeVert311.out" "polySplit151.ip";
+connectAttr "polySplit151.out" "polySplit152.ip";
+connectAttr "polySplit152.out" "polySoftEdge45.ip";
+connectAttr "polySurfaceShape19.wm" "polySoftEdge45.mp";
+connectAttr "polyTweak615.out" "polyMergeVert312.ip";
+connectAttr "polySurfaceShape19.wm" "polyMergeVert312.mp";
+connectAttr "polySoftEdge45.out" "polyTweak615.ip";
+connectAttr "polyMergeVert312.out" "polyTweakUV193.ip";
+connectAttr "polyTweakUV193.out" "polyMergeVert313.ip";
+connectAttr "polySurfaceShape19.wm" "polyMergeVert313.mp";
+connectAttr "polyMergeVert313.out" "polyTweakUV194.ip";
+connectAttr "polyTweakUV194.out" "polyMergeVert314.ip";
+connectAttr "polySurfaceShape19.wm" "polyMergeVert314.mp";
+connectAttr "polyMergeVert314.out" "polyTweakUV195.ip";
+connectAttr "polyTweakUV195.out" "polyMergeVert315.ip";
+connectAttr "polySurfaceShape19.wm" "polyMergeVert315.mp";
+connectAttr "polyMergeVert315.out" "polyTweakUV196.ip";
+connectAttr "polyTweakUV196.out" "polyMergeVert316.ip";
+connectAttr "polySurfaceShape19.wm" "polyMergeVert316.mp";
+connectAttr "polyTweak616.out" "polyMergeVert317.ip";
+connectAttr "polySurfaceShape19.wm" "polyMergeVert317.mp";
+connectAttr "polyMergeVert316.out" "polyTweak616.ip";
+connectAttr "polyMergeVert317.out" "polyTweakUV197.ip";
+connectAttr "polyTweakUV197.out" "polyMergeVert318.ip";
+connectAttr "polySurfaceShape19.wm" "polyMergeVert318.mp";
+connectAttr "polyMergeVert318.out" "polyTweakUV198.ip";
+connectAttr "polyTweak617.out" "polyMergeVert319.ip";
+connectAttr "polySurfaceShape19.wm" "polyMergeVert319.mp";
+connectAttr "polyTweakUV198.out" "polyTweak617.ip";
+connectAttr "polyMergeVert319.out" "polyTweakUV199.ip";
+connectAttr "polyTweak618.out" "polyMergeVert320.ip";
+connectAttr "polySurfaceShape19.wm" "polyMergeVert320.mp";
+connectAttr "polyTweakUV199.out" "polyTweak618.ip";
+connectAttr "polyMergeVert320.out" "polyTweakUV200.ip";
+connectAttr "polyTweak619.out" "polyMergeVert321.ip";
+connectAttr "polySurfaceShape19.wm" "polyMergeVert321.mp";
+connectAttr "polyTweakUV200.out" "polyTweak619.ip";
+connectAttr "polyMergeVert321.out" "polyTweakUV201.ip";
+connectAttr "polyTweak620.out" "polyMergeVert322.ip";
+connectAttr "polySurfaceShape19.wm" "polyMergeVert322.mp";
+connectAttr "polyTweakUV201.out" "polyTweak620.ip";
+connectAttr "polyMergeVert322.out" "polyTweakUV202.ip";
+connectAttr "polyTweak621.out" "polyMergeVert323.ip";
+connectAttr "polySurfaceShape19.wm" "polyMergeVert323.mp";
+connectAttr "polyTweakUV202.out" "polyTweak621.ip";
+connectAttr "polyMergeVert323.out" "polyTweakUV203.ip";
+connectAttr "polyTweak622.out" "polyMergeVert324.ip";
+connectAttr "polySurfaceShape19.wm" "polyMergeVert324.mp";
+connectAttr "polyTweakUV203.out" "polyTweak622.ip";
+connectAttr "polyMergeVert324.out" "polyTweakUV204.ip";
+connectAttr "polyTweak623.out" "polyMergeVert325.ip";
+connectAttr "polySurfaceShape19.wm" "polyMergeVert325.mp";
+connectAttr "polyTweakUV204.out" "polyTweak623.ip";
+connectAttr "polyMergeVert325.out" "polyTweakUV205.ip";
+connectAttr "polyTweakUV205.out" "polyMergeVert326.ip";
+connectAttr "polySurfaceShape19.wm" "polyMergeVert326.mp";
+connectAttr "polyMergeVert326.out" "polyTweakUV206.ip";
+connectAttr "polyTweakUV206.out" "polyMergeVert327.ip";
+connectAttr "polySurfaceShape19.wm" "polyMergeVert327.mp";
+connectAttr "polyMergeVert327.out" "polyTweakUV207.ip";
+connectAttr "polyTweakUV207.out" "polyMergeVert328.ip";
+connectAttr "polySurfaceShape19.wm" "polyMergeVert328.mp";
+connectAttr "polyMergeVert328.out" "polyTweakUV208.ip";
+connectAttr "polyTweakUV208.out" "polyMergeVert329.ip";
+connectAttr "polySurfaceShape19.wm" "polyMergeVert329.mp";
+connectAttr "polyMergeVert329.out" "polyTweakUV209.ip";
+connectAttr "polyTweakUV209.out" "polyMergeVert330.ip";
+connectAttr "polySurfaceShape19.wm" "polyMergeVert330.mp";
+connectAttr "polyMergeVert330.out" "polyTweakUV210.ip";
+connectAttr "polyTweakUV210.out" "polyMergeVert331.ip";
+connectAttr "polySurfaceShape19.wm" "polyMergeVert331.mp";
+connectAttr "polyMergeVert331.out" "polyTweakUV211.ip";
+connectAttr "polyTweakUV211.out" "polyMergeVert332.ip";
+connectAttr "polySurfaceShape19.wm" "polyMergeVert332.mp";
+connectAttr "polyMergeVert332.out" "polySplit153.ip";
+connectAttr "polySplit153.out" "polySoftEdge46.ip";
+connectAttr "polySurfaceShape19.wm" "polySoftEdge46.mp";
 connectAttr "blinn1SG.pa" ":renderPartition.st" -na;
 connectAttr "lambert2SG.pa" ":renderPartition.st" -na;
 connectAttr "lambert1SG.pa" ":renderPartition.st" -na;
